@@ -1,0 +1,118 @@
+.outerContainer {
+  background-color: #000;
+  padding: 2rem;
+  font-family: 'Karla', sans-serif;
+}
+
+.container {
+  /* margin: 4rem; */
+  background-color: #fff;
+}
+
+.firstRow {
+  padding: 4rem;
+}
+
+.headline1 {
+  padding-bottom: 2rem;
+  color: hsl(179, 62%, 43%);
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+.headline2 {
+  color: hsl(71, 73%, 54%);
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+.regular {
+  padding-top: 0.7rem;
+  color: hsl(204, 43%, 80%);
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.regularCyan {
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.Cyan {
+  background-color: hsl(179, 62%, 43%);
+  color: #fff;
+  padding: 5rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+}
+
+.Greyish {
+  background-color: hsl(190, 50%, 60%);
+  color: #fff;
+  padding: 5rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+}
+
+.white {
+  color: #fff;
+}
+
+.large {
+  font-size: 4.5rem;
+  padding-left: 1rem;
+}
+
+.pricing {
+  padding-top: 3rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: hsl(204, 49%, 90%);
+}
+
+.btn-yellow {
+  background-color: hsl(71, 73%, 54%);
+  padding: 1rem 0;
+  color; #fff;
+}
+
+.roundedEdges {
+  border-radius: 5%;
+}
+
+.Greyish h2 {
+  padding-bottom: 1.7rem;
+}
+
+.regular2 {
+  color: hsl(204, 49%, 90%);
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (max-width: 800px) {
+
+
+  .headline2 {
+    padding-bottom: 1rem;
+  }
+
+  .minimizeIt {
+    width: 50%;
+  }
+
+  .firstRow {
+    padding: 3rem 1.8rem;
+  }
+
+  .Cyan {
+    padding: 2.8rem;
+  }
+
+  .Greyish {
+    padding: 2.8rem;
+  }
+
+
+}

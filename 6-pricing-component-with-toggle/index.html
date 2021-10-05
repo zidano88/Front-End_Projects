@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pricing with Toggle</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/99cbbe0574.js" crossorigin="anonymous"></script>
+
+  <!-- Css Stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bootstrap Scripts Queries-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <h1 class="mainHeadline">Our Pricing</h1>
+
+  <div class="toggleBox">
+    <label class="toggleLabels">Annually</label>
+
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input type="checkbox" id="myCheck" onclick="myFunction()">
+      <span class="slider round"></span>
+    </label>
+
+    <label class="toggleLabels">Monthly</label>
+
+  </div>
+
+
+
+  <div class="cardBox">
+
+    <div class="card whiteCard leftCard">
+      <div class="card-body">
+        <h6 class="card-title">Basic</h6>
+        <p class="card-text blackDollarSign priceLine">$ <span class="blackPrice">199.99</span></p>
+        <hr>
+        <p class="card-text">500 GB Storage</p>
+        <hr>
+        <p class="card-text">2 Users Allowed</p>
+        <hr>
+        <p class="card-text">Send up to 3 GB</p>
+        <hr>
+        <a href="#" class="btn purpleBtn btn-block">LEARN MORE</a>
+      </div>
+    </div>
+
+    <div class="card purpleCard centerCard">
+      <div class="card-body">
+        <h6 class="card-title">Professional</h6>
+        <p class="card-text whiteDollarSign priceLine">$ <span class="whitePrice">249.99</span></p>
+        <hr class="whiteHr">
+        <p class="card-text">1 TB Storage</p>
+        <hr class="whiteHr">
+        <p class="card-text">5 Users Allowed</p>
+        <hr class="whiteHr">
+        <p class="card-text">Send up to 10 GB</p>
+        <hr class="whiteHr">
+        <a href="#" class="btn whiteBtn btn-block">LEARN MORE</a>
+      </div>
+    </div>
+
+    <div class="card whiteCard rightCard">
+      <div class="card-body">
+        <h6 class="card-title">Master</h6>
+        <p class="card-text blackDollarSign priceLine">$ <span class="blackPrice">399.99</span></p>
+        <hr>
+        <p class="card-text">2 TB Storage</p>
+        <hr>
+        <p class="card-text">10 Users Allowed</p>
+        <hr>
+        <p class="card-text">Send up to 20 GB</p>
+        <hr>
+        <a href="#" class="btn purpleBtn btn-block">LEARN MORE</a>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

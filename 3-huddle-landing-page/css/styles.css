@@ -1,0 +1,120 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+
+  /* color: var(--primary-color); */
+}
+
+body {
+  background-image: url("C:/Users/ZIDAN/Documents/Web Development/Projects/3-huddle-landing-page/images/desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 1600px 920px;
+  background-color: var(--violet);
+  padding: 4rem 8rem;
+}
+
+
+.mockupImages {
+  padding: 4rem 0;
+}
+
+.callToAction {
+  margin: 3rem 0;
+  padding: 4rem ;
+}
+
+.slogan {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  padding: 0 8rem 0.6rem 0;
+  line-height: 4rem;
+}
+
+.introduction {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding-right: 8rem;
+}
+
+.registerBtn {
+  border-radius: 2rem;
+  width: 12rem;
+  height: 3.2rem;
+  color: var(--violet);
+  background-color: #fff;
+  margin: 1rem 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 2rem 0;
+}
+
+.registerBtn:hover {
+  color: #fff;
+  background-color: var(--soft-magenta);
+}
+
+.icons {
+  color: #fff;
+  text-align: right;
+}
+
+.faButton:hover {
+  color: var(--soft-magenta);
+  background-color: rgba(255,255,255,0);
+  border-color: var(--soft-magenta);
+}
+
+.faButton {
+  margin: 0.5rem;
+  border-radius: 3rem;
+}
+
+.fa-twitter {
+  width: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 2rem;
+  }
+
+  .mockupImages {
+    padding: 3rem 0 2rem 0;
+  }
+
+  .callToAction {
+    margin: 0;
+    padding: 4rem ;
+    text-align: center;
+
+  }
+
+  .mockImg {
+    max-width: 35rem;
+    height:auto;
+    /* width: 50%; */
+    padding: 4rem 1rem 0 1rem;
+  }
+
+  .slogan {
+    padding: 0;
+    text-align: center;
+  }
+
+  .introduction {
+    padding: 1rem;
+  }
+
+  .registerBtn {
+    width: 20rem;
+  }
+
+  .icons {
+    text-align: center;
+  }
+
+}

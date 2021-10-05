@@ -1,0 +1,101 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+.flyer {
+  background-image: url("C:/Users/ZIDAN/Documents/Web Development/Projects/4-base-apparel/images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  padding: 2rem 10rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.modelPhoto {
+  padding: 0;
+  margin: 0;
+  width: 610px;
+  height: 800px;
+  margin-left: -1.5rem;
+}
+
+.tsneemPhoto {
+  width: 610px;
+  height: 800px;
+}
+
+.pinkHeader {
+  color: var(--desaturated-red);
+  font-weight: 300;
+  padding: 7rem 0 0 0;
+  letter-spacing: 0.6rem;
+  font-size: 60px;
+}
+
+.regularHeader {
+  color: var(--dark-grayish-red);
+  font-weight: 600;
+  letter-spacing: 0.6rem;
+  font-size: 60px;
+}
+
+.message {
+  color: var(--desaturated-red);
+  font-weight: 400;
+  padding: 1.2rem 6rem 0 0;
+  line-height: 1.7rem;
+}
+
+.emailField {
+  /* margin: 1.5rem 4rem 0 0; */
+  padding: 2.5rem 5rem 0 0;
+  /* margin-right: 0;  */
+}
+
+.errorIcon {
+  /* padding: 0 3rem 0 0; */
+  margin: 0.75rem 3.5rem 0 0;
+  border-right: 2rem;
+
+  width: 1.6rem;
+  height: 1.6rem;
+  z-index: +1;
+
+  visibility: hidden;
+
+}
+
+.myBtn {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 2rem;
+  width: 5.5rem;
+  z-index: +1;
+  margin-left: -2.5rem;
+  box-shadow: 6px 7px 20px #999999;
+}
+
+.myBtn:hover {
+  background-image: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 80%, 90%));
+}
+
+.eAddress {
+  border-radius: 2rem;
+  margin-right: -5.5rem;
+  padding-left: 1.5rem;
+  /* border-right: 3rem; */
+  /* padding-right: 5rem; */
+  color: #5f5f5f;
+  /* z-index: 0; */
+  /* border-color: red; */
+
+}
+
+.eAddress::placeholder {
+            color: var(--desaturated-red);
+            opacity: 0.5;
+}
+
+.alertMessage {
+  color: var(--soft-red);
+  margin: -0.5rem 0 0 2rem;
+}

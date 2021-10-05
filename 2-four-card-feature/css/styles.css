@@ -1,0 +1,103 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-grey: hsl(0, 0%, 98%);
+  /* color: var(--primary-color); */
+}
+
+
+
+.content {
+  padding: 5rem 11rem;
+  background-color: var(--very-light-grey);
+  font-family: 'Poppins', sans-serif;
+}
+
+.firstHeadline {
+  font-weight: 200;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+.secondHeadline {
+  font-weight: 600;
+  text-align: center;
+}
+
+.regular {
+  text-align: center;
+  padding: 1rem 15rem;
+  /* width: 50%; */
+  font-weight: 200;
+  color: var(--grayish-blue);
+}
+
+.cardHeadline {
+  font-weight: 600;
+}
+
+.card {
+    border-radius: 0.5rem;
+    width: 25rem;
+    margin: 2rem;
+    /* height: 15rem; */
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card.supervisor {
+  border-top: 4px solid var(--cyan);
+}
+
+.card.teamBuilder {
+  border-top: 4px solid var(--red);
+}
+
+.card.karma {
+  border-top: 4px solid var(--orange);
+}
+
+.card.calculator {
+  border-top: 4px solid var(--blue);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.cardContent {
+  padding: 1rem 0;
+  padding-right: 2rem;
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--grayish-blue);
+}
+
+/* .card-img-bottom {
+  width: 20%;
+  position:relative;
+  left: 80%;
+} */
+
+img {
+  position:relative;
+  left: 84%;
+}
+
+@media (max-width: 800px) {
+  .content {
+    padding: 5rem 2rem;
+  }
+
+  .regular {
+    padding: 1rem 2rem;
+  }
+
+  .firstHeadline, .secondHeadline {
+    font-size: 30px;
+  }
+}
