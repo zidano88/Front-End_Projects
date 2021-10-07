@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/99cbbe0574.js" crossorigin="anonymous"></script>
+  
+    <!-- Css Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  
+    <!-- Bootstrap Scripts Queries-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  "> <!--navbar-light-->
+        <a class="logoImage" href="#"><img src="images/logo.svg" alt="shortly logo"></a>
+<!-- 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+
+        <div  class="collapse navbar-collapse " id="navbarTogglerDemo02">  
+            
+            <ul class="navbar-nav leftNav">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Resources</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav rightNav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Login</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn signUpBtn cyanBtn">Sign Up</button>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <section class="callToAction">
+        
+        <div class="leftCallToAction">
+            <h1 class="slogan">
+                More than just shorter links 
+            </h1>
+            <div class="message">
+                Build your brand's recognition and get detailed insights on how your links are performing.
+            </div>
+            <button class="btn getStartedBtn cyanBtn">Get Started</button>
+    
+        </div>
+        
+        <img class="workingIllustImage" src="images/illustration-working.svg" alt="illustraion for working">
+
+    </section>
+    
+    
+    <form action="" class="shortenerBox">
+        <div class="form-group">
+            <input class="userUrlTextBox" type="url" placeholder="Shorten a link here...">
+        </div>
+        <button type="submit" class="btn shortenItBtn cyanBtn">Shorten It!</button>                
+    </form>
+        
+    
+    
+    <section class="branding">
+        <h1 class="brandingHeadline"><strong>Advanced Statistics</strong></h1>
+        <div class="brandingMessage">Track how your links are performing across the web with our advanced statistics dashboard</div>
+        
+        <div class="brandingBoxes">
+
+            <div class="card leftCard">
+                <div class="card-body">
+                    <img class="brandingImages" src="images/icon-brand-recognition.svg" alt="brand recognition icon">
+
+                    <h4 class="card-title">Brand Recognition</h4>
+                  <p class="card-text">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your contest.</p>
+                </div>
+            </div>
+
+            <hr class="cyanLine"> 
+
+            <div class="card centerCard">
+                <div class="card-body">
+                    <img class="brandingImages" src="images/icon-detailed-records.svg" alt="detailed records icon">
+
+                    <h4 class="card-title">Detailed Records</h4>
+                  <p class="card-text">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+                </div>
+            </div>
+
+            <hr class="cyanLine">
+
+            <div class="card rightCard">
+                <div class="card-body">
+                    <img class="brandingImages" src="images/icon-fully-customizable.svg" alt="fully customizable icon">
+
+                    <h4 class="card-title">Fully Customizable</h4>
+                  <p class="card-text">Improve brand awareness and content discoverability through customizable links. supercharging audience engagement.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="bottomCallToAction"> 
+        <h1 class="boostCallToAtion">Boost your links today</h1>
+        <button class="btn getStartedBtn cyanBtn">Get Started</button>
+    </section>
+
+    <footer class="">
+        <a class="logoImageWhite" href="#"><img src="images/logo.svg" alt="shortly logo"></a>
+        
+        <div  class="ml-auto">
+            <h6>Features</h6>
+            <ul>
+                <li>Link Shortening</li>
+                <li>Branded Links</li>
+                <li>Analytics</li>
+            </ul>
+        </div>
+
+        <div class="ml-auto">
+            <h6>Resources</h6>
+            <ul>
+                <li>Blog</li>
+                <li>Developers</li>
+                <li>Support</li>
+            </ul>
+        </div>
+
+        <div class="ml-auto">
+            <h6>Company</h6>
+            <ul>
+                <li>About</li>
+                <li>Our Team</li>
+                <li>Careers</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div class="socialMediaIcons ml-auto">
+            <img class="mediaIcon" src="images/icon-facebook.svg" alt="facebook icon">
+            <img class="mediaIcon" src="images/icon-twitter.svg" alt="twitter icon">
+            <img class="mediaIcon" src="images/icon-pinterest.svg" alt="pinterest icon">
+            <img class="mediaIcon" src="images/icon-instagram.svg" alt="instgram icon">
+        </div>
+
+
+    </footer>
+
+
+    
+</body>
+</html>

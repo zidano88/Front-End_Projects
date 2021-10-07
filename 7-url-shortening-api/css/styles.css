@@ -1,0 +1,272 @@
+/* font-family: 'Poppins', sans-serif;  500 , 700 */
+:root {
+    --cyan: hsl(180, 66%, 49%);
+    --light-cyan: hsl(180, 53%, 79%);
+    --dark-violet: hsl(257, 27%, 26%);
+
+    --red: hsl(0, 87%, 67%);
+
+    --modified_gray: #eff1f7;
+    --gray: hsl(0, 0%, 75%);
+    --grayish-violet: hsl(257, 7%, 63%);
+    --very-dark-blue: hsl(255, 11%, 22%);
+    --very-dark-violet: hsl(260, 8%, 14%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 0;
+}
+
+.navbar {
+    padding: 0 9rem;
+}
+
+.logoImage {
+    padding: 0 1.8rem 0 0;
+}
+
+.nav-item {
+    padding: 1rem 0.4rem;
+    
+}
+
+.nav-link {
+    color: var(--grayish-violet);
+    font-weight: 700;
+}
+
+.signUpBtn {
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.4rem 1.2rem;
+    font-weight: 700;
+}
+
+.callToAction {
+    margin-top: 3rem;
+    display: flex;
+    padding: 0 9rem;
+
+}
+
+.leftCallToAction {
+    margin-top: 4rem;
+}
+
+.slogan {
+    font-weight: 700;
+    font-size: 75px;
+}
+
+.message {
+    color: var(--grayish-violet);
+    /* padding-right: 5rem; */
+    padding: 0 5rem 2rem 0;
+    font-size: 22px;
+}
+
+.getStartedBtn {
+    color: #fff;
+    border-radius: 2rem;
+    padding: 0.8rem 2.5rem;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.workingIllustImage {
+    margin-right: -17rem;
+}
+
+
+.shortenerBox {
+    position: relative;
+    background-color: var(--dark-violet);
+    background-image: url(../images/bg-shorten-desktop.svg);
+    background-repeat: no-repeat;
+    width: 1110px;
+    height: 150px;
+    margin: 4rem 9rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    border-radius: 0.6rem;
+    
+
+    
+}
+
+.form-group {
+    margin: 0;
+}
+
+.userUrlTextBox {
+    width: 50rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: 0;
+    padding-left: 1.5rem;
+    margin: 1rem;
+
+}
+
+.shortenItBtn {
+    color: #fff;
+    font-weight: 700;
+    padding: 1.25rem 3rem;
+    border-radius: 0.5rem;
+    margin: 0 1rem 0 0.2rem;
+}
+
+.branding {
+    background-color: var(--modified_gray);
+    padding: 11rem 9rem 7rem;
+    margin-top: -4.75rem;
+    text-align: center;
+}
+
+.brandingHeadline {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+    font-size: 42px;
+}
+
+.brandingMessage {
+    color: var(--grayish-violet);
+    font-size: 20px;
+    padding: 1rem 17rem;
+}
+
+.brandingBoxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 35rem;
+    margin: 0;
+    /* text-align: left;  */
+    border-radius: 0.4rem;
+    border: 0;
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: left; 
+    padding-right: 2.2rem;
+    line-height: 1.6rem;
+}
+
+.cyanLine {
+    border-top: 8px solid var(--cyan);
+    position: relative;
+    width: 3rem;
+    margin: 0;
+}
+
+.brandingImages {
+    background-color: var(--dark-violet);
+    border-radius: 5rem;
+    padding: 1rem;
+    /* position: relative; */
+    margin-top: -5.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+    margin: 1rem 0 ;
+    color: var(--very-dark-violet);
+    font-size: 22px;
+}
+
+.card-text {
+    color: var(--grayish-violet);
+    font-size: 15px;
+}
+
+.centerCard {
+    margin-top: 4rem;
+}
+
+.rightCard {
+    margin-top: 8rem;
+}
+
+.bottomCallToAction {
+    background-image: url(../images/bg-boost-desktop.svg);
+    height: 250px;
+    background-color: var(--dark-violet);
+    text-align: center;
+    /* display:grid;
+    justify-content: center;
+    align-items: center; */
+    padding: 2rem;
+}
+
+.boostCallToAtion {
+    color: #fff;
+    font-weight: 700;
+    margin: 2rem;
+}
+
+footer{
+    background-color: var(--very-dark-violet);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 9rem;
+
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+
+}
+
+h6 {
+    font-weight: 700;
+    margin: 0.5rem 0 1.5rem;
+}
+
+li {
+    font-weight: 500;
+    color: var(--gray);
+    margin: 0.8rem 0;
+}
+
+.logoImageWhite {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(241deg) brightness(106%) contrast(101%);
+    /* margin: 0 3rem; */
+    margin-right: 10rem;
+}
+
+.mediaIcon {
+    margin: 0 0.7rem;
+}
+
+.cyanBtn {
+    background-color: var(--cyan);
+}
+
+.cyanBtn:hover {
+    background-color: var(--light-cyan);
+}
+
+.nav-link:hover {
+    color: var(--very-dark-violet)
+}
+
+li:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.mediaIcon:hover {
+    filter: invert(29%) sepia(57%) saturate(573%) hue-rotate(132deg) brightness(96%) contrast(91%);
+    cursor: pointer;
+}
