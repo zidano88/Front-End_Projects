@@ -1,0 +1,251 @@
+/* font-family: 'Montserrat', sans-serif; */
+
+:root {
+
+  /* Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%) */
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* font-weight: 700; */
+  background-color: var(--very-light-grayish-blue);
+  background-image: url("C:/Users/ZIDAN/Documents/Web Development/Projects/6-pricing-component-with-toggle-master/images/bg-top.svg"), url("C:/Users/ZIDAN/Documents/Web Development/Projects/6-pricing-component-with-toggle-master/images/bg-bottom.svg");
+  background-position: right top, left bottom;
+  background-repeat: no-repeat, no-repeat;
+  /* text-align: center; */
+  /* background-image: url("C:/Users/ZIDAN/Documents/Web Development/Projects/6-pricing-component-with-toggle-master/images/bg-top.svg"); */
+  background-repeat: no-repeat;
+  /* background-image: url("C:/Users/ZIDAN/Documents/Web Development/Projects/6-pricing-component-with-toggle-master/images/bg-bottom.svg"); */
+
+}
+
+.toggleBox {
+  display:flex;
+  align-items: center;
+  /* display: inline-table; */
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.toggleLabels {
+  color: var(--light-grayish-blue);
+  /* margin-top: 1rem; */
+  padding: 1rem;
+  /* margin: 0; */
+}
+
+.cardBox {
+  margin: 3rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+
+}
+
+.card {
+  border-radius: 0.5rem;
+  /* border-color: rgba(0, 0, 0, .4); */
+  /* border-collapse: collapse; */
+  border: 0;
+  text-align: center;
+  width: 20rem;
+  padding: 0.5rem 0.2rem;
+  /* margin: 0; */
+
+
+}
+
+.mainHeadline {
+  font-weight: 700;
+  text-align: center;
+  color: var(--grayish-blue);
+  margin: 3rem 0 2rem 0;
+}
+
+/* Card Properties */
+
+.priceLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* White Card */
+
+.whiteCard {
+  color: var(--grayish-blue);
+  margin: 1.5rem 0;
+}
+
+.blackDollarSign {
+  font-size: 25px;
+  color: var(--dark-grayish-blue);
+  /* padding-right: 8rem; */
+  /* border: 2rem; */
+  /* padding-bottom: 10px; */
+}
+
+.blackPrice {
+  /* font-weight: 700; */
+  font-size: 50px;
+  color: var(--dark-grayish-blue);
+  margin-left: 5px;
+}
+
+.purpleBtn {
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 0.6rem;
+  margin-top: 1.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid white;
+}
+
+.purpleBtn:hover {
+  background-image: linear-gradient(to right, white , white);
+  /* border-style: solid;  */
+  border: 1px solid hsl(237, 63%, 64%);
+  /* border-color: hsl(237, 63%, 64%); */
+  color: hsl(237, 63%, 64%);
+}
+
+.leftCard {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rightCard {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Purple Card */
+
+.purpleCard {
+  background-image: linear-gradient(to bottom, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+  color: #fff;
+  padding: 2rem 0;
+  /* height: 50rem; */
+}
+
+.whiteDollarSign {
+  font-size: 25px;
+  color: #fff;
+  /* padding-right: 8rem; */
+  /* border: 2rem; */
+  /* padding-bottom: 10px; */
+}
+
+.whitePrice {
+  /* font-weight: 700; */
+  font-size: 50px;
+  /* color: var(--dark-grayish-blue); */
+  margin-left: 5px;
+}
+
+.whiteBtn {
+  background-color: #fff;
+  color: hsl(237, 63%, 64%);
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 0.6rem;
+  margin-top: 1.5rem;
+  border-radius: 0.2rem;
+  border: 0;
+  /* border: 1px solid white; */
+}
+
+.whiteBtn:hover {
+  background-image: linear-gradient(to bottom, #757be1 , #7076e0);
+  /* border-style: solid;  */
+  border: 1px solid #fff;
+  /* border-color: hsl(237, 63%, 64%); */
+  color: #fff;
+}
+
+.whiteHr {
+  background-color: #fff;
+}
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  /* margin: 0; */
+  /* margin-bottom: 1rem; */
+  /* text-align: center; */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider {
+background-image: linear-gradient(to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+/* background-color: #2196F3; */
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(to right, hsl(236, 72%, 90%) , hsl(236, 72%, 79%));
+}
+
+/* input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+} */
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

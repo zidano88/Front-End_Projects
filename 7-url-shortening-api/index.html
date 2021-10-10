@@ -39,10 +39,10 @@
             
             <ul class="navbar-nav leftNav">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Features</a>
+                    <a class="nav-link" href="#brand">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Pricing</a>
+                    <a class="nav-link" href="pricing_page/index.html"  target="_blank">Pricing</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Resources</a>
@@ -81,17 +81,42 @@
 
     </section>
     
-    
-    <form action="" class="shortenerBox">
-        <div class="form-group">
-            <input class="userUrlTextBox" type="url" placeholder="Shorten a link here...">
-        </div>
-        <button type="submit" class="btn shortenItBtn cyanBtn">Shorten It!</button>                
+    <!-- method="POST" action="https://api.shrtco.de/v2/shorten?url=www.frontendmentor.io" -->
+    <!-- onsubmit="return validateForm()" -->
+    <!-- type="submit" -->
+
+    <form id="shortenerApi" name="urlForm" action="" class="shortenerBox" required>
+        <input name="urlBox" class="userUrlTextBox" type="text" placeholder="Shorten a link here...">
+        <button onclick="validateForm();" type="button"  class="btn shortenItBtn cyanBtn">Shorten It!</button>   
+        <div class="alertMessage"></div>
+               
     </form>
         
     
     
-    <section class="branding">
+    <section class="branding" id="brand">
+        
+        <ul id="data">
+            <li class="usageHistory">
+                <div class="testBox">
+                    <div class="enteredUrl">https://www.test.com</div>
+                    <div class="shortenedUrl">https://short</div>
+                </div>
+                
+                <button type="button" class="btn cyanBtn copyBtn">Copy</button>
+            </li>
+            
+            <li class="usageHistory">
+                <div class="testBox">
+                    <div class="enteredUrl">https://www.testafwfwe.com</div>
+                    <div class="shortenedUrl">https://shortdsnlfkfg</div>
+                </div>
+                <button type="button" class="btn cyanBtn copyBtn">Copy</button>
+            </li>
+
+
+        </ul>
+
         <h1 class="brandingHeadline"><strong>Advanced Statistics</strong></h1>
         <div class="brandingMessage">Track how your links are performing across the web with our advanced statistics dashboard</div>
         
@@ -135,7 +160,7 @@
 
     <section class="bottomCallToAction"> 
         <h1 class="boostCallToAtion">Boost your links today</h1>
-        <button class="btn getStartedBtn cyanBtn">Get Started</button>
+        <a href="#shortenerApi"><button class="btn getStartedBtn cyanBtn">Get Started</button></a>
     </section>
 
     <footer class="">
@@ -180,6 +205,9 @@
     </footer>
 
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
     
 </body>
 </html>

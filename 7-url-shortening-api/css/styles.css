@@ -89,13 +89,13 @@ body {
     margin: 4rem 9rem 0;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     /* text-align: center; */
     /* vertical-align: middle; */
     border-radius: 0.6rem;
-    
-
+    flex-wrap: wrap;
+    padding: 1.75rem 2rem;
     
 }
 
@@ -111,6 +111,46 @@ body {
     padding-left: 1.5rem;
     margin: 1rem;
 
+}
+
+.userUrlTextBox::placeholder {
+    opacity: 60%;
+}
+
+.Red::-webkit-input-placeholder
+    {
+        color: var(--red); /* WebKit, Blink, Edge */
+    }
+.Red:-moz-placeholder
+    {
+        color: var(--red); /* Mozilla Firefox 4 to 18 */
+    }
+.Red::-moz-placeholder
+    {
+        color: var(--red); /* Mozilla Firefox 19+ */
+    }
+.Red::-ms-input-placeholder
+    {
+        color: var(--red); /* Microsoft Edge */
+    }
+.Red:-ms-input-placeholder
+    {
+        color: var(--red); /* Internet Explorer 10-11 */
+    }
+.Red::placeholder
+    {
+        color: var(--red); /* Most modern browsers support this now. */
+    }
+
+.alertMessage {
+    color: var(--red);
+    margin: -1rem 1rem;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 80%;
+    /* position: absolute; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
 }
 
 .shortenItBtn {
@@ -251,6 +291,7 @@ li {
 
 .cyanBtn {
     background-color: var(--cyan);
+    color: #fff;
 }
 
 .cyanBtn:hover {
@@ -269,4 +310,49 @@ li:hover {
 .mediaIcon:hover {
     filter: invert(29%) sepia(57%) saturate(573%) hue-rotate(132deg) brightness(96%) contrast(91%);
     cursor: pointer;
+}
+
+.usageHistory {
+    display: flex;
+    /* display: block; */
+
+    /* justify-content: right; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* color: red; */
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.enteredUrl {
+    color: var(--very-dark-violet);
+    /* margin-right: 25rem; */
+}
+
+.shortenedUrl {
+    color: var(--cyan);
+    /* align-self: flex-end;
+    justify-self: flex-end;
+    place-self: flex-end;
+    align-self: right;
+    justify-self: right;
+    place-self: right; */
+}
+
+.copyBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    margin-left: 1rem;
+}
+
+.testBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-right: 20rem; */
+    width: 58rem;
+    margin-right: 0;
+    font-size: 17px;
+
 }
