@@ -1,0 +1,26 @@
+--Fonts--
+(sans-serif)
+public sans : 400-
+Roboto:	      400-700-350-300
+arial: 	      400
+
+
+--colors--
+
+#E3EAF0
+#EBF2F7
+#EDF3EB
+#36536B
+#BA4270
+#EBF1F6
+#FBFCFE
+
+on hover color: #DA6D97
+
+background colors:
+Main: #EDF3F8
+for circle: #D2DBE3
+
+black background colors:
+Main: #1B262F
+for circle: #1F2D38

@@ -1,0 +1,59 @@
+
+body {
+    background-image: url("../images/home/desktop/bg-pattern-circle.svg");
+    background-position: 45rem -35rem;
+    background-repeat: no-repeat;
+}
+
+.pricingDiv {
+    padding: 0.5rem 4rem 3rem;
+}
+
+.pricingSection h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 350;
+    font-size: 56px;
+    color: var(--san-juan-blue);
+    line-height: 72px;
+    padding-left: 1rem;
+}
+
+.pricingPlansContainer {
+    display: flex;
+}
+
+.pricingPlan {
+    padding: 2rem 1rem;
+}
+
+.pricingPlan h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: var(--dark-pink);
+}
+
+.pricingPlan ul {
+    list-style-type: none;
+}
+
+.pricingCallToAction {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--light-san-juan-blue);
+    line-height: 28px;
+}
+
+.requestAccessBtn {
+    border-color: var(--san-juan-blue);
+    border-radius: 2rem;
+    color: var(--san-juan-blue);
+    padding: 0.6rem 2rem;
+}
+
+.requestAccessBtn:hover {
+    background-color: var(--san-juan-blue);
+    color: #fff;
+}
+

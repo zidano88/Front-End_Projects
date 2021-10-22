@@ -1,0 +1,5 @@
+Hover Status
+pricing page 
+about page
+contact page
+responsive design for all pages

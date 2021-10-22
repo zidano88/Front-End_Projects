@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">    
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/99cbbe0574.js" crossorigin="anonymous"></script>
+  
+    <!-- Css Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="css/index.css">
+  
+    <!-- Bootstrap Scripts Queries-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="images/home/desktop/tap-logo.png">
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="logoImage" href="#"><img src="images/home/desktop/logo.svg" alt="shortly logo"></a> 
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div  class="collapse navbar-collapse " id="navbarTogglerDemo02">  
+            
+            <ul class="navbar-nav leftNav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"  target="_blank">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav rightNav ml-auto">
+                <li class="nav-item">
+                    <button class="btn demoBtn">Schedule a Demo</button>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+
+    <section class="pricingSection">
+
+        <div class="pricingDiv">
+            <h1>Pricing</h1>
+
+            <div class="pricingPlansContainer">
+                <div class="pricingPlan">
+                    <h3>Free Plan</h3>
+                    <p class="pricingCallToAction">Build and test using our core set of products with up to 100 API requests</p>
+                    <h1>$0.00</h1>
+                    <hr>
+                    <ul>
+                        <li>Transactions</li>
+                        <li>Auth</li>
+                        <li>Identify</li>
+                        <li>Investment</li>  
+                        <li>Assets</li>    
+                        <li>Liabilities</li>    
+                        <li>Income</li>                           
+                    </ul>
+                    <hr>
+                    <button class="btn btn-outline-light requestAccessBtn">Request Access</button>
+                </div>
+
+                <div class="pricingPlan">
+                    <h3>Basic Plan</h3>
+                    <p class="pricingCallToAction">Launch your project with unlimited requests and no contractual minimums</p>
+                    <h1>$249.00</h1>
+                    <hr>
+                    <ul>
+                        <li>Transactions</li>
+                        <li>Auth</li>
+                        <li>Identify</li>
+                        <li>Investment</li>  
+                        <li>Assets</li>    
+                        <li>Liabilities</li>    
+                        <li>Income</li>                           
+                    </ul>
+                    <hr>
+                    <button class="btn btn-outline-light requestAccessBtn">Request Access</button>
+                </div>
+
+                <div class="pricingPlan">
+                    <h3>Premium Plan</h3>
+                    <p class="pricingCallToAction">Get tailored solutions, volume pricing, and dedicated support for your team</p>
+                    <h1>$499.00</h1>
+                    <hr>
+                    <ul>
+                        <li>Transactions</li>
+                        <li>Auth</li>
+                        <li>Identify</li>
+                        <li>Investment</li>  
+                        <li>Assets</li>    
+                        <li>Liabilities</li>    
+                        <li>Income</li>                           
+                    </ul>
+                    <hr>
+                    <button class="btn btn-outline-light requestAccessBtn">Request Access</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="advertisementFourthRow flexRow">
+            <h2>Ready to start?</h2>
+            <form name="emailForm" class="input-group mb-3 emailField" onsubmit="return validateForm()" required>
+                <input id="test1" name="emailValue" type="text" class="form-control eAddress" placeholder="Enter email address" aria-label="Email Address" aria-describedby="Email Address Field">
+                <button type="submit" id="subBtn" class="btn demoBtn">Schedule a Demo</button>
+            </form>
+             
+         </div>
+
+    </section>
+
+
+
+    <footer class="">
+
+        <div class="footerLeftSide">
+            <a class="logoImageWhite" href="#"><img src="images/home/desktop/logo.svg" alt="shortly logo"></a> 
+            
+            <div class="footerLinksContainer">
+            
+                <a class="footerLink" href="#">Pricing</a>
+                <a class="footerLink" href="#"  target="_blank">About</a>
+                <a class="footerLink" href="#">Contact</a>
+                
+            </div>
+
+        </div>
+        
+        
+
+        <div class="footerIconsContainer">
+            
+            <img class="footerIcon" src="images/home/desktop/facebook.svg" alt="Facebook Icon">
+            <img class="footerIcon" src="images/home/desktop/twitter.svg" alt="Twitter Icon">
+            <img class="footerIcon" src="images/home/desktop/linkedin.svg" alt="Linkedin Icon">
+            
+        </div>
+
+    </footer>
+    
+</body>
+</html>
