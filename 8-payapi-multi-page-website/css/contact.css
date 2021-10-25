@@ -9,8 +9,6 @@ body {
 }
 
 .contactSection h1 {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 350; */
     font-size: 56px;
     color: var(--san-juan-blue);
     line-height: 70px;
@@ -28,7 +26,6 @@ body {
     grid-auto-columns: 1fr;
     gap: 20px;
     margin-top: 48px;
-    /* mar-right: 60px; */
     box-sizing: border-box;
 }
 
@@ -45,7 +42,6 @@ input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
 	border: 2px solid var(--light-san-juan-blue);
-    /* background-color: var(--light-san-juan-blue); */
 	background-clip: content-box;
     padding: 2.5px;
 	margin: 0.5rem 0.5rem 0 0;
@@ -60,14 +56,8 @@ input[type="checkbox"]:checked {
 
 
 .checkboxMessage {
-    /* font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px; */
     color: var(--san-juan-blue);
     line-height: 20px;
-    /* width: 10%; */
-    /* margin-right: 0rem; */
-    /* padding-right: 20rem; */
 }
 
 .submitBtn {
@@ -88,29 +78,15 @@ input[type="checkbox"]:checked {
 }
 
 .joinAndLogosContainer h4 {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 350; */
     font-size: 24px;
     color: var(--san-juan-blue);
-    /* padding-left: 4.25rem; */
     margin: 0 15rem 3rem 0rem;
 }
 
 .companiesLogosContainer {
-    /* display: grid; */
     width: auto;
     display: grid;
     grid-template: 0.2fr 0.2fr / 0.23fr 0.23fr 0.23fr;
     justify-items: start;
     gap: 30px;
 }
-
-/* 
-.contactForm .nameField::after {
-    content: "This field can't be empty";
-    color: #FF0000;
-    font-size: 11px;
-    position: absolute;
-    left: 20px;
-    bottom: -20px;
-} */

@@ -206,8 +206,6 @@ body {
 }
  
 .advertisementFourthRow h2 {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 350; */
     font-size: 48px;
     line-height: 56px;
     color: var(--san-juan-blue);
@@ -236,9 +234,6 @@ footer {
 
 .footerLink {
     color: var(--dark-grey);
-    /* font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px; */
     margin: 0 2rem;
 }
 

@@ -10,8 +10,6 @@ body {
 }
 
 .pricingSection h1 {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 350; */
     font-size: 56px;
     color: var(--san-juan-blue);
     line-height: 72px;
@@ -27,8 +25,6 @@ body {
 }
 
 .pricingPlan h3 {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 300; */
     font-size: 32px;
     color: var(--dark-pink);
 }
@@ -52,9 +48,6 @@ body {
 }
 
 .pricingCallToAction {
-    /* font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px; */
     color: var(--light-san-juan-blue);
     line-height: 28px;
 }

@@ -10,8 +10,6 @@ body {
 }
 
 .aboutSlogan {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 350; */
     font-size: 56px;
     color: var(--san-juan-blue);
     line-height: 70px;
@@ -29,17 +27,12 @@ body {
 }
 
 .aboutItemHeadline {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 300; */
     font-size: 32px;
     color: var(--san-juan-blue);
 
 }
 
 .aboutParagraph {
-    /* font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px; */
     color: var(--light-san-juan-blue);
     line-height: 28px;
     padding-right: 35.5rem;
@@ -54,17 +47,12 @@ body {
 }
 
 .companyStatsItem span {
-    /* font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px; */
     color: var(--light-san-juan-blue);
     
 
 }
 
 .companyStatsItem h3 {
-    /* font-family: 'Roboto', sans-serif;
-    font-weight: 300; */
     font-size: 56px;
     color: var(--dark-pink);
 }
