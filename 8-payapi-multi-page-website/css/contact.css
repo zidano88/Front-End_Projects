@@ -1,0 +1,116 @@
+body {
+    background-image: url("../images/home/desktop/bg-pattern-circle.svg");
+    background-position: 71rem -37rem;
+    background-repeat: no-repeat;
+}
+
+.contactSection {
+    padding: 0.5rem 5rem;
+}
+
+.contactSection h1 {
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 350; */
+    font-size: 56px;
+    color: var(--san-juan-blue);
+    line-height: 70px;
+    padding: 0 50rem 1rem 0; 
+}
+
+
+.contactContainer {
+    display: flex;
+}
+
+.contactForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 20px;
+    margin-top: 48px;
+    /* mar-right: 60px; */
+    box-sizing: border-box;
+}
+
+.inputfield {
+    outline: none;
+    border: none;
+    background-color: var(--light-grey);
+    border-bottom: 1px solid var(--light-san-juan-blue);
+    padding: 0 1rem 0.5rem;
+}
+
+input[type="checkbox"] {
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 2px solid var(--light-san-juan-blue);
+    /* background-color: var(--light-san-juan-blue); */
+	background-clip: content-box;
+    padding: 2.5px;
+	margin: 0.5rem 0.5rem 0 0;
+
+}
+
+input[type="checkbox"]:checked {
+    border: 2px solid var(--dark-pink);
+	background-color: var(--dark-pink);
+    
+}
+
+
+.checkboxMessage {
+    /* font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px; */
+    color: var(--san-juan-blue);
+    line-height: 20px;
+    /* width: 10%; */
+    /* margin-right: 0rem; */
+    /* padding-right: 20rem; */
+}
+
+.submitBtn {
+    border-color: var(--san-juan-blue);
+    border-radius: 2rem;
+    color: var(--san-juan-blue);
+    padding: 0.6rem 2rem;
+    width: 10rem;
+}
+
+.submitBtn:hover {
+    background-color: var(--san-juan-blue);
+    color: #fff;
+}
+
+.joinAndLogosContainer {
+    margin: 8rem 8rem;
+}
+
+.joinAndLogosContainer h4 {
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 350; */
+    font-size: 24px;
+    color: var(--san-juan-blue);
+    /* padding-left: 4.25rem; */
+    margin: 0 15rem 3rem 0rem;
+}
+
+.companiesLogosContainer {
+    /* display: grid; */
+    width: auto;
+    display: grid;
+    grid-template: 0.2fr 0.2fr / 0.23fr 0.23fr 0.23fr;
+    justify-items: start;
+    gap: 30px;
+}
+
+/* 
+.contactForm .nameField::after {
+    content: "This field can't be empty";
+    color: #FF0000;
+    font-size: 11px;
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+} */

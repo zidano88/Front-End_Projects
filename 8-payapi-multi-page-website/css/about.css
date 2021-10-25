@@ -1,0 +1,74 @@
+
+body {
+    background-image: url("../images/home/desktop/bg-pattern-circle.svg"),url("../images/home/desktop/bg-pattern-circle.svg");
+    background-position: 71rem -37rem, -17rem 36rem;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.aboutSection {
+    padding: 1rem 8rem;
+}
+
+.aboutSlogan {
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 350; */
+    font-size: 56px;
+    color: var(--san-juan-blue);
+    line-height: 70px;
+    padding: 0 45rem 1rem 0; 
+}
+
+.aboutContent {
+    margin: 1rem 0 3rem;
+}
+
+.aboutItem {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    padding: 1.5rem 0;
+}
+
+.aboutItemHeadline {
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 300; */
+    font-size: 32px;
+    color: var(--san-juan-blue);
+
+}
+
+.aboutParagraph {
+    /* font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px; */
+    color: var(--light-san-juan-blue);
+    line-height: 28px;
+    padding-right: 35.5rem;
+    
+}
+
+.companyStatistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 2rem 0;
+}
+
+.companyStatsItem span {
+    /* font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px; */
+    color: var(--light-san-juan-blue);
+    
+
+}
+
+.companyStatsItem h3 {
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 300; */
+    font-size: 56px;
+    color: var(--dark-pink);
+}
+
+.unPaded {
+    margin: 0 -5rem;
+}

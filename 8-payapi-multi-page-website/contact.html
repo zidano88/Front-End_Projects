@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">    
+    
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/99cbbe0574.js" crossorigin="anonymous"></script>
+      
+        <!-- Css Stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/index.css">
+      
+        <!-- Bootstrap Scripts Queries-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+        <link rel="icon" href="images/home/desktop/tap-logo.png">
+    
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg publicSans15px400">
+        <a class="logoImage" href="/index.html"><img src="images/home/desktop/logo.svg" alt="shortly logo"></a> 
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div  class="collapse navbar-collapse " id="navbarTogglerDemo02">  
+            
+            <ul class="navbar-nav leftNav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav rightNav ml-auto">
+                <li class="nav-item">
+                    <button class="btn demoBtn">Schedule a Demo</button>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <section class="contactSection">
+        <h1 class="roboto350">Submit a help request and we’ll get in touch shortly.</h1>
+        <div class="contactContainer">
+            <form action="" class="contactForm">
+                <input type="text" class="inputfield nameField" placeholder="Name" id="name" name="name">
+                <input type="text" class="inputfield" placeholder="Email Address" id="email" name="email">
+                <input type="text" class="inputfield" placeholder="Company Name" name="companyName">
+                <input type="text" class="inputfield" placeholder="Title" name="title">
+                <textarea name="message" class="inputfield" id="contactMessage" cols="30" rows="5" placeholder="Message"></textarea>
+
+                <label for="checkboxContainer">
+                    <div class="flexRow">
+                        <input type="checkbox" class="checkboxDeleted" checked="checked">
+                        <!-- <span class="modifiedCheckbox" ></span> -->
+                        <span class="checkboxMessage publicSans15px400">Stay up-to-date with company announcements and updates to our API</span>
+                    </div>
+                    
+                </label>
+
+                <button class="btn btn-outline-light submitBtn">Submit</button>
+
+            </form>
+            <div class="joinAndLogosContainer">
+                <h4 class="roboto350">Join the thousands of innovators already building with us</h4>
+                <div class="companiesLogosContainer">
+                    <img class="" src="images/home/desktop/tesla.svg" alt="Tesla Logo">
+                    <img class="" src="images/home/desktop/microsoft.svg" alt="Microsoft Logo">
+                    <img class="" src="images/home/desktop/hewlett-packard.svg" alt="Hp Logo">
+                    <img class="" src="images/home/desktop/oracle.svg" alt="Oracle Logo">
+                    <img class="" src="images/home/desktop/google.svg" alt="Google Logo">
+                    <img class="" src="images/home/desktop/nvidia.svg" alt="Nvidia Logo">
+                    
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer class="">
+
+        <div class="footerLeftSide">
+            <a class="logoImageWhite" href="#"><img src="images/home/desktop/logo.svg" alt="shortly logo"></a> 
+            
+            <div class="footerLinksContainer">
+            
+                <a class="footerLink publicSans15px400" href="#">Pricing</a>
+                <a class="footerLink publicSans15px400" href="#"  target="_blank">About</a>
+                <a class="footerLink publicSans15px400" href="#">Contact</a>
+                
+            </div>
+
+        </div>
+        
+        
+
+        <div class="footerIconsContainer">
+            
+            <img class="footerIcon" src="images/home/desktop/facebook.svg" alt="Facebook Icon">
+            <img class="footerIcon" src="images/home/desktop/twitter.svg" alt="Twitter Icon">
+            <img class="footerIcon" src="images/home/desktop/linkedin.svg" alt="Linkedin Icon">
+            
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

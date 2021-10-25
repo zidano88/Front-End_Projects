@@ -1,52 +1,50 @@
 /* font-family: 'Public Sans', sans-serif;
    font-family: 'Roboto', sans-serif; */
 :root {
-
     --dark-pink: #ba4270;
     --link-water-white: #fbfcfe;
     --san-juan-blue: #36536b;
     --mirage-blue: #1b262f;
     --charm-pink: #da6d97;
     --light-san-juan-blue: #6c8294;
-
-
     --light-grey: #EDF3F8;
-    --dark-grey:  #D2DBE3;
-    --light-dark-blue: #1F2D38;
-    
-    
-
-/* 
-    --hover-pink: #DA6D97;
-    --dark-pink: #BA4270;
-    --test1: #E3EAF0;
-    --test2: #EBF2F7;
-    --test3: #EDF3EB;
-    --test4: #36536B;
-    --test5: #EBF1F6;
-    --test6: #FBFCFE; */
-
-    
+    --dark-grey:  #bbb8b8;
+    --light-dark-blue: #1F2D38;    
 }
 
 body {
-    
     background-color: var(--light-grey);
-    
+}
+
+.publicSans15px400 {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.roboto400 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.roboto350 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 350;
+}
+
+.roboto300 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .containerForNavAndFirstSection {
     background-image: url("../images/home/desktop/bg-pattern-circle.svg");
     background-position: 44rem -10rem;
     background-repeat: no-repeat;
-
 }
 
 .navbar {
     margin: 2rem 4rem;
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
     padding-top: 3rem;
     margin-top: 0;
 }
@@ -68,11 +66,14 @@ body {
     z-index: +1;
 }
 
+.demoBtn:hover {
+    background-color: var(--charm-pink);
+}
+
 .callToAtionSection {
     padding: 1rem 5rem;
     margin: 2rem 0 0;
     display: flex;
-    
 }
 
 .callToActionMessage {
@@ -80,8 +81,6 @@ body {
 }
 
 .slogan {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     font-size: 72px;
     color: var(--san-juan-blue);
     line-height: 72px;
@@ -101,9 +100,6 @@ body {
 }
 
 .contactUsQuestion {
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
     color: var(--light-san-juan-blue);
     padding: 0 1rem;
 }
@@ -111,7 +107,6 @@ body {
 .contactUsLink {
     text-decoration: underline;
     color: var(--light-san-juan-blue);
-
 }
 
 .whoWeWorkWith {
@@ -131,9 +126,6 @@ body {
 }
 
 .whoWeWorkWithMessage {
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
     line-height: 28px;
     color: #D2DBE3;
     margin: 1rem 5rem 2rem 0;
@@ -157,7 +149,6 @@ body {
     margin: 0 0;
     justify-self: center;
     filter: invert(99%) sepia(47%) saturate(0%) hue-rotate(261deg) brightness(300%) contrast(101%);
-    /* margin: 1.1rem; */
 }
 
 .advertisement {
@@ -173,17 +164,12 @@ body {
 
 
 .advertisementRowHeader {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 350;
     font-size: 48px;
     line-height: 56px;
     color: var(--san-juan-blue);
 }
 
 .advertisementRowContent {
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
     line-height: 28px;
     color: var(--light-san-juan-blue);
 }
@@ -197,8 +183,7 @@ body {
 }
 
 .advertisementThirdRow {
-    margin: 1rem 4rem 5rem;
-    
+    margin: 1rem 4rem 5rem;  
 }
 
 .advertisementCard {
@@ -206,31 +191,23 @@ body {
 }
 
 .advertisementCard h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
     font-size: 18px;
     color: var(--san-juan-blue);
     margin: 2rem;
 }
 
 .advertisementCard p {
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
     line-height: 28px;
     color: var(--light-san-juan-blue);
 }
 
 .advertisementFourthRow {
     padding: 1rem 5rem;
-    /* justify-content: center;
-    align-content: center; */
-    
 }
  
 .advertisementFourthRow h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 350;
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 350; */
     font-size: 48px;
     line-height: 56px;
     color: var(--san-juan-blue);
@@ -259,10 +236,15 @@ footer {
 
 .footerLink {
     color: var(--dark-grey);
-    font-family: 'Public Sans', sans-serif;
+    /* font-family: 'Public Sans', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 15px; */
     margin: 0 2rem;
+}
+
+.footerLink:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .footerLeftSide {
@@ -275,4 +257,9 @@ footer {
 
 .footerIcon {
     margin: 0.5rem;
+}
+
+.footerIcon:hover {
+    filter: invert(59%) sepia(83%) saturate(476%) hue-rotate(296deg) brightness(88%) contrast(94%);
+    cursor: pointer;
 }

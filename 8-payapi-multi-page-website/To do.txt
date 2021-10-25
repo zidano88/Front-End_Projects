@@ -1,5 +1,5 @@
-Hover Status
-pricing page 
-about page
-contact page
+clean code from comments and spaces
 responsive design for all pages
+check if field is empty in inputs
+
+

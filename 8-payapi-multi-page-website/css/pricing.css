@@ -6,12 +6,12 @@ body {
 }
 
 .pricingDiv {
-    padding: 0.5rem 4rem 3rem;
+    padding: 0.5rem 8rem 3rem;
 }
 
 .pricingSection h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 350;
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 350; */
     font-size: 56px;
     color: var(--san-juan-blue);
     line-height: 72px;
@@ -27,20 +27,34 @@ body {
 }
 
 .pricingPlan h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 300; */
     font-size: 32px;
     color: var(--dark-pink);
 }
 
+.pricingPlan h1 {
+    padding-left: 0;
+}
+
+.pricingPlan hr {
+    background-color: rgba(108,130,148,.5);
+    margin: 1rem 0;
+}
+
 .pricingPlan ul {
     list-style-type: none;
+    padding-left: 1rem;
+}
+
+.pricingPlan li {
+
 }
 
 .pricingCallToAction {
-    font-family: 'Public Sans', sans-serif;
+    /* font-family: 'Public Sans', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 15px; */
     color: var(--light-san-juan-blue);
     line-height: 28px;
 }
@@ -50,6 +64,7 @@ body {
     border-radius: 2rem;
     color: var(--san-juan-blue);
     padding: 0.6rem 2rem;
+    margin-top: 0.8rem;
 }
 
 .requestAccessBtn:hover {
@@ -57,3 +72,6 @@ body {
     color: #fff;
 }
 
+.notActive {
+    color: var(--dark-grey);
+}
