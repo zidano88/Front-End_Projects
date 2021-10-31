@@ -1,4 +1,3 @@
-clean code from comments and spaces
 responsive design for all pages
 check if field is empty in inputs
 

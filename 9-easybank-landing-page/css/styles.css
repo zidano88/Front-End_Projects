@@ -1,0 +1,282 @@
+
+/* font-family: 'Public Sans', sans-serif; */
+/* weights : 300m 400, 700 */
+:root {
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%)    ;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    padding: 0;
+}
+
+.flexNavbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 6rem;
+    border: 0;
+    z-index: +2;
+    background-color: #fff;
+}
+
+.nav-link {
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+.requestBtn {
+    color: var(--white);
+    background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+/* Call To Action Section */
+
+.callToActionSection {
+    background-color: var(--very-light-gray);
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 45rem -16rem;
+    display: flex;
+}
+
+.callToActionDiv {
+    padding: 12rem 0 12rem 7rem;
+    max-width: 35rem;
+}
+
+.callToActionslogan {
+    color: var(--dark-blue);
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.callToActionParagraph {
+    color: var(--grayish-blue);
+    font-size: 18px;
+    padding: 1rem 0;
+}
+
+.phonesImage {
+    margin: -5rem -8rem -10rem 0;
+    z-index: 0;
+    margin-left: auto;
+}
+
+/* Why Choose Easybank Section */
+
+.whyEasybankSection {
+    background-color: var(--light-grayish-blue);
+}
+
+.specsCardsBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.specsCard {
+    margin-right: 1rem;
+    width: 17.5rem;
+    /* min-width: 18rem; */
+}
+
+.whyEasybankSection {
+    padding: 4rem 7rem;
+}
+
+.sectionHeader {
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+.whyEasybankSection p {
+    color: var(--grayish-blue);
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 4rem;
+}
+
+.specsCard img {
+    margin-bottom: 2rem;
+}
+
+.specsCardHeader {
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+
+.specsCard p {
+    font-size: 17px;
+    padding: 1rem 0rem 0 0;
+}
+
+.latestArticlesSection {
+    background-color: var(--very-light-gray);
+}
+
+.latestArticlesSection {
+    padding: 4rem 7rem;
+}
+
+.articlesBox {
+    margin: 2.5rem -1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article {
+    margin: 1rem;
+    width: 20rem;
+}
+
+.articleImage {
+    width: 100%;
+    height: 50%;
+    /* width: 20rem; */
+}
+
+.articlesBox {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.articleAndHeaderBox {
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.articleAuthor {
+    color: var(--grayish-blue);
+    font-size: 13px;
+}
+
+.articleHeader {
+    color: var(--dark-blue);
+    padding: 0.4rem 3rem 0.1rem 0;
+}
+
+.article p {
+    color: var(--grayish-blue);
+    padding: 0 0.7rem 0 0;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    display: flex;
+    padding: 2.5rem 7rem;
+}
+
+.logoAndIconsContainer {
+    margin-right: 15rem;
+}
+
+.footerLogo {
+    margin-bottom: 3rem;
+}
+
+.footerIconsContainer {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(5, 0.6fr);  
+}
+
+.footerNavLinksContainer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 8rem;
+}
+
+.footerNavLink {
+    /* height: 2rem; */
+    padding: 5px 0;   
+}
+
+.btnAndCopyrightsContainer {
+    margin-left: auto;
+}
+
+.footerRequestBtn {
+    float: right;
+    margin-bottom: 1.5rem;
+}
+
+.copyrights {
+    color: var(--grayish-blue);
+    float: right;
+}
+
+@media only screen and (max-width: 1200px) {
+    .specsCardsBox {
+        justify-content: center;
+    }
+
+    .specsCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoAndIconsContainer {
+        margin: 1.5rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footerLogo {
+        margin-bottom: 2rem;
+        justify-self: center;
+    }
+
+    .footerIconsContainer {
+        grid-gap: 30px;
+    }
+
+    .footerNavLinksContainer {
+        columns: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btnAndCopyrightsContainer {
+        margin: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footerRequestBtn, .copyrights {
+        float: none;
+        margin: 0.3rem;
+    }
+}
