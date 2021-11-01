@@ -20,21 +20,33 @@ body {
 /* Navigation Bar */
 
 .navbar {
-    padding: 0;
+    background-color: #fff;
+    z-index: +2;
+    padding: 1rem 6rem;
+    
 }
 
-.flexNavbar {
+.navbar-nav {
+    margin-right: auto;
+}
+
+
+/* .flexNavbar {
     display: flex;
     justify-content: space-between;
     padding: 1rem 6rem;
     border: 0;
     z-index: +2;
     background-color: #fff;
-}
+} */
 
 .nav-link {
     font-weight: 400;
     color: var(--grayish-blue);
+}
+
+.nav-link:hover {
+    color: var(--dark-blue);
 }
 
 .requestBtn {
@@ -42,6 +54,10 @@ body {
     background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
     border-radius: 2rem;
     padding: 0.5rem 2rem;
+}
+
+.requestBtn:hover {
+    background-image: linear-gradient(to right,hsl(120, 35%, 66%),hsl(192, 52%, 65%));
 }
 
 /* Call To Action Section */
@@ -72,20 +88,25 @@ body {
 }
 
 .phonesImage {
-    margin: -5rem -8rem -10rem 0;
-    z-index: 0;
+    /* margin: -5rem -8rem -10rem 0; */
+    /* z-index: 0; */
     margin-left: auto;
+    position: absolute;
+    right: -8%;
+    top: -3%;
 }
 
 /* Why Choose Easybank Section */
 
 .whyEasybankSection {
     background-color: var(--light-grayish-blue);
+    
 }
 
 .specsCardsBox {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .specsCard {
@@ -128,9 +149,6 @@ body {
 
 .latestArticlesSection {
     background-color: var(--very-light-gray);
-}
-
-.latestArticlesSection {
     padding: 4rem 7rem;
 }
 
@@ -149,11 +167,6 @@ body {
     width: 100%;
     height: 50%;
     /* width: 20rem; */
-}
-
-.articlesBox {
-    display: flex;
-    /* flex-wrap: wrap; */
 }
 
 .articleAndHeaderBox {
@@ -181,10 +194,7 @@ footer {
     background-color: var(--dark-blue);
     display: flex;
     padding: 2.5rem 7rem;
-}
-
-.logoAndIconsContainer {
-    margin-right: 15rem;
+    justify-content: space-between;
 }
 
 .footerLogo {
@@ -197,6 +207,10 @@ footer {
     grid-template-columns: repeat(5, 0.6fr);  
 }
 
+.footerIconsContainer .nav-item:hover {
+    filter: invert(35%) sepia(59%) saturate(5818%) hue-rotate(152deg) brightness(100%) contrast(75%);
+}
+
 .footerNavLinksContainer {
     list-style-type: none;
     margin: 0;
@@ -206,12 +220,11 @@ footer {
 }
 
 .footerNavLink {
-    /* height: 2rem; */
     padding: 5px 0;   
 }
 
-.btnAndCopyrightsContainer {
-    margin-left: auto;
+.footerNavLink:hover {
+    color: #209276;
 }
 
 .footerRequestBtn {
@@ -225,6 +238,55 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
+    .navbar {
+        padding: 0.5rem 2rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin: 1rem;
+    } 
+
+    .navbar .requestBtn {
+        display: none;
+    }
+    
+    .callToActionSection {
+        flex-direction: column-reverse;
+        background-image: url(/images/bg-intro-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: 0;
+        z-index: -2;
+    }
+    
+    .phonesImage {
+        position: static;
+        size: 20%;
+        padding: 1rem;
+        margin: 0;
+        z-index: 0;
+        margin-top: -11rem;
+    }
+
+    .callToActionDiv {
+        padding: 1.4rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .callToActionslogan {
+        margin: 0;
+    }
+
+    .whyEasybankSection {
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .sectionHeader {
+        padding: 0rem 1rem;
+    }
+
     .specsCardsBox {
         justify-content: center;
     }
@@ -233,8 +295,43 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
+        margin-right: 1rem;
+        width: auto;
+    }
+
+    .specsCard img {
+        /* size: 10px; */
+        width: 6rem;
+        margin: 1rem auto;
+    }
+
+    .latestArticlesSection {
+        padding: 3rem 1rem;
+    }
+
+    .latestArticlesSection h3 {
+        padding: 0 6rem;
+    }
+
+    .articlesBox{
+        margin: 0;
+        /* padding: 0; */
+    }
+
+    .article {
+        width: auto;
+        margin: 0 1rem;
+    }
+
+    .articleHeader {
+        padding: 0.5rem;
     }
     
+    .articleAndHeaderBox p {
+        padding: 0;
+    }
+
     footer {
         display: flex;
         flex-wrap: wrap;
@@ -268,7 +365,7 @@ footer {
     }
     
     .btnAndCopyrightsContainer {
-        margin: 1.5rem;
+        margin: 1.5rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
