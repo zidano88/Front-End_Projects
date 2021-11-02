@@ -1,0 +1,121 @@
+/* font-family: 'Space Mono', monospace; */
+/* weight: 400, 500, 700 */
+
+:root {
+    --dark-cyan: hsl(183, 100%, 15%);
+    --very-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    --Modified-dark-grayish-cyan: hsl(167, 59%, 47%);
+
+}
+
+body {
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+}
+
+.calculatorName {
+    margin: 8rem auto 2rem;
+    justify-self: center;
+    font-weight: 400;
+    color: var(--dark-cyan);
+}
+
+.calculatorBody {
+    background-color: var(--white);
+    margin: 3rem auto;
+    width: 55rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.billInputDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.input-group-text {
+    background-color: var(--white);
+    border-right: none;
+    border-right-style: none;
+    border-right-width: 0;
+    border-right-color: var(--white);
+}
+
+.tipsBtnsAndLabelDiv {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.tipBtnsContainer {
+    width: 100%;
+    display: grid;
+    grid-template: 2.5rem 2.5rem / 30% 30% 30%;
+    gap: 1rem;
+}
+
+.tipBtn {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+}
+
+.noOfPeopleDiv {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.noOfPeopleLabel {
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 1px;
+    
+}
+
+.outputContainer {
+    background-color: var(--dark-cyan);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.row {
+    justify-content: space-between;
+    align-content: center;
+    margin: 0.7rem;
+}
+
+.outputNumber {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--Modified-dark-grayish-cyan);
+}
+
+.whiteLabel {
+    color: var(--white);
+}
+
+.grayLabel {
+    color: var(--light-grayish-cyan);
+}
+
+.resetBtn {
+    background-color: var(--light-grayish-cyan);
+    color: var(--dark-cyan);
+    margin-top: 4.5rem;
+}
+
