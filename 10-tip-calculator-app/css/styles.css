@@ -71,6 +71,28 @@ body {
 .tipBtn {
     background-color: var(--dark-cyan);
     color: var(--white);
+    font-weight: 700;
+}
+
+.tipBtn:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--dark-cyan);
+}
+
+.form-control {
+    font-weight: 700;
+    color: var(--dark-cyan);
+}
+
+#custom {
+    border-radius: 0.2rem;
+    font-weight: 700;
+    color: var(--dark-cyan);
+
+}
+
+#custom:hover {
+    border-color: var(--Modified-dark-grayish-cyan);
 }
 
 .noOfPeopleDiv {
@@ -114,8 +136,28 @@ body {
 }
 
 .resetBtn {
-    background-color: var(--light-grayish-cyan);
+    background-color: var(--Modified-dark-grayish-cyan);
     color: var(--dark-cyan);
     margin-top: 4.5rem;
+    font-weight: 700;
 }
 
+.resetBtn:hover {
+    background-color: var(--light-grayish-cyan);
+}
+
+
+@media (max-width: 800px) {
+    .calculatorName {
+        margin: 2rem auto;
+    }
+
+    .calculatorBody {
+        margin: 1rem auto;
+        border-radius: 2rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+}
