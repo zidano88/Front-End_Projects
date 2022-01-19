@@ -21,6 +21,7 @@ const postPlayerData = async (url = '', data = {}) => {
     }
 }
 
+
 //getWeatherDatafromServer is a GET function that receives data from the server
 const getDataBase = async (url = '', data = {}) => {
     const response = await fetch(url, {
@@ -173,13 +174,16 @@ document.getElementById('addNewPLayerBtn').addEventListener('click', (event) => 
 
 document.getElementById('addNewMatchBtn').addEventListener('click', (event) => {
     let selected1 = document.getElementById("matchPlayerOne");
-    let firstPLayer = selected1.value;
+    let firstPlayer = selected1.value;
     let selected2 = document.getElementById("matchPlayerTwo");
-    let secondPLayer = selected2.value;
-    let firstPLayerGoals = document.getElementById('playerOneGoals').value;
-    let secondPLayerGoals = document.getElementById('playerTwoGoals').value;
+    let secondPlayer = selected2.value;
+    let firstPlayerGoals = document.getElementById('playerOneGoals').value;
+    let secondPlayerGoals = document.getElementById('playerTwoGoals').value;
 
+    let newMatch = { firstPlayerName: firstPlayer, firstPlayerScore: firstPlayerGoals, secondPlayerName: secondPlayer, secondPlayerScore: secondPlayerGoals };
 
+    postPlayerData('/addNewMatch', newMatch);
+    //    /addNewMatch
     // console.log(`first player goals: ${firstPLayerGoals} and second players goals: ${secondPLayerGoals}`);
     // var strUser2 = e.options[e.selectedIndex].text; //test2
     // console.log(strUser2);
