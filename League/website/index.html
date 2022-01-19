@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawry Zobat</title>
+
+    <!-- Css Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+
+<body>
+
+
+    <h1 class="mainHeadline customFlex">
+        <!-- دورى ظباط الصالة -->
+        Dawry Zobat
+    </h1>
+    <div class="test1">
+        <!-- adfdas -->
+    </div>
+    <div class="membersContainer">
+        <ol id="playersList">
+            <!-- <li class="memberElement">
+                <div class="position">1</div>
+                <div class="name">test</div>
+                <img src="/images/AC_Milan.png" class="teamLogo" alt="">
+                <div class="played">5</div>
+                <div class="won">3</div>
+                <div class="lost">2</div>
+                <div class="tie">0</div>
+                <div class="goals">7</div>
+                <div class="goalsIn">4</div>
+                <div class="points">9</div>
+            </li> -->
+
+        </ol>
+
+    </div>
+
+    <section class="addNewSec customFlex">
+        <h1 class="Header1">
+            New Match
+        </h1>
+        <div class="customFlex">
+            <div class="customVertialFlex customMargin">
+                <label for="enteredName" class="boldLabel">Player One</label>
+                <select name="" id="matchPlayerOne" class="selectCustom">
+                    <!-- <option value="">Omar</option>
+                    <option value="">Ayman</option>
+                    <option value="">Darwish</option> -->
+                </select>
+                <input type="text" id="playerOneGoals" class="goalInput" placeholder="Player One Goals">
+            </div>
+
+            <div class="largeX">
+                +
+            </div>
+
+            <div class="customVertialFlex customMargin">
+                <label for="enteredName" class="boldLabel">Player One</label>
+                <select name="" id="matchPlayerTwo" class="selectCustom">
+                    <!-- <option value="">Omar</option>
+                    <option value="">Ayman</option>
+                    <option value="">Darwish</option> -->
+                </select>
+                <input type="text" id="playerTwoGoals" class="goalInput" placeholder="Player Two Goals">
+
+            </div>
+        </div>
+
+        <button id="addNewMatchBtn" class="addBtn">Add New Match</button>
+
+    </section>
+
+    <section class="addNewSec customFlex">
+        <h1 class="Header1">
+            New Player
+        </h1>
+        <div class="customFlex">
+            <div class="customVertialFlex customMargin">
+                <label for="enteredName" class="boldLabel">Player Name</label>
+                <input type="text" id="enteredName" placeholder="Enter New PLayer Name">
+            </div>
+
+            <div class="customVertialFlex customMargin">
+                <label for="logo" class="boldLabel">Upload Player Team Logo</label>
+                <input type="file" id="enteredLogo" placeholder="Upload Team Logo">
+            </div>
+        </div>
+
+        <button id="addNewPLayerBtn" class="addBtn">Add This New Player</button>
+
+
+    </section>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
