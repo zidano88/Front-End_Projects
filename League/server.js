@@ -10,6 +10,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { response } = require('express');
+const { error } = require('console');
 
 // Start up an instance of app
 const app = express();
@@ -45,7 +46,7 @@ app.get("/getDataBase", (req, res) => {
     database.find({}, (err, data) => {
         if (err) {
             console.log('error here');
-            response.end();
+            res.end();
             return;
         }
         res.json(data);
@@ -78,157 +79,170 @@ app.post("/addNewMatch", (req, res) => {
     let firstScore = 0;
     let secondScore = 0;
 
-    if (req.body.firstPlayerScore == req.body.secondPlayerScore) {
-        console.log("this is Tieeeeeeeeeeeeeiiiieeeee");
-        //Add Logic for Tie Match
-        first = req.body.firstPlayerName;
-        second = req.body.secondPlayerName;
-        firstScore = req.body.firstPlayerScore;
-        secondScore = req.body.secondPlayerScore;
-
-        database.find({ name: first }, function (err, player) {
-            //This part retrieves player's current points and adds 1 points to it
-            let winnerCurrentPoints = parseInt(player[0].points);
-            winnerCurrentPoints++;
-            database.update({ name: first }, { $set: { points: winnerCurrentPoints } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds scored goals to his current number of goals
-            let winnerCurrentGoals = parseInt(player[0].goals);
-            winnerCurrentGoals += parseInt(firstScore);
-            database.update({ name: first }, { $set: { goals: winnerCurrentGoals } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds goalsin scored by competitor to winnner current number of goals in
-            let winnerCurrentGoalsIn = parseInt(player[0].goalIn);
-            winnerCurrentGoalsIn += parseInt(secondScore);
-            database.update({ name: first }, { $set: { goalIn: winnerCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds played matches to player
-            let winnerPlayedMatches = parseInt(player[0].played);
-            winnerPlayedMatches++;
-            database.update({ name: first }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds tie matches to the winner player
-            let winnerTieMatches = parseInt(player[0].tie);
-            winnerTieMatches++;
-            database.update({ name: first }, { $set: { tie: winnerTieMatches } }, { multi: true }, function (err, numReplaced) {
-            });
+    //Condition to check if players chosen have the same names
+    if (req.body.firstPlayerName == req.body.secondPlayerName) {
+        console.log("Please Choose Different players");
+        res.send({ operation: "failed" });
+        // res.end();
+        return;
 
 
-        });
+    } else {
 
-        database.find({ name: second }, function (err, player) {
-            //This part retrieves player's current points and adds 1 points to it
-            let winnerCurrentPoints = parseInt(player[0].points);
-            winnerCurrentPoints++;
-            database.update({ name: second }, { $set: { points: winnerCurrentPoints } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds played matches to player
-            let winnerPlayedMatches = parseInt(player[0].played);
-            winnerPlayedMatches++;
-            database.update({ name: second }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds tie matches to the losing player
-            let loserTieMatches = parseInt(player[0].tie);
-            loserTieMatches++;
-            database.update({ name: second }, { $set: { tie: loserTieMatches } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds scored goals to his current number of goals
-            let loserCurrentGoals = parseInt(player[0].goals);
-            loserCurrentGoals += parseInt(secondScore);
-            database.update({ name: second }, { $set: { goals: loserCurrentGoals } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds scored goalsin to his current number of goalsIn
-            let loserCurrentGoalsIn = parseInt(player[0].goalIn);
-            loserCurrentGoalsIn += parseInt(firstScore);
-            database.update({ name: second }, { $set: { goalIn: loserCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
-            });
-
-        });
-
-    }
-
-    else {
-        //Add logic for winning for each side 
-        if (req.body.firstPlayerScore > req.body.secondPlayerScore) {
-            //Start test
+        if (req.body.firstPlayerScore == req.body.secondPlayerScore) {
+            console.log("this is Tieeeeeeeeeeeeeiiiieeeee");
+            //Add Logic for Tie Match
             first = req.body.firstPlayerName;
             second = req.body.secondPlayerName;
             firstScore = req.body.firstPlayerScore;
             secondScore = req.body.secondPlayerScore;
-            //End test
-            console.log("first player won");
+
+            database.find({ name: first }, function (err, player) {
+                //This part retrieves player's current points and adds 1 points to it
+                let winnerCurrentPoints = parseInt(player[0].points);
+                winnerCurrentPoints++;
+                database.update({ name: first }, { $set: { points: winnerCurrentPoints } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds scored goals to his current number of goals
+                let winnerCurrentGoals = parseInt(player[0].goals);
+                winnerCurrentGoals += parseInt(firstScore);
+                database.update({ name: first }, { $set: { goals: winnerCurrentGoals } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds goalsin scored by competitor to winnner current number of goals in
+                let winnerCurrentGoalsIn = parseInt(player[0].goalIn);
+                winnerCurrentGoalsIn += parseInt(secondScore);
+                database.update({ name: first }, { $set: { goalIn: winnerCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds played matches to player
+                let winnerPlayedMatches = parseInt(player[0].played);
+                winnerPlayedMatches++;
+                database.update({ name: first }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds tie matches to the winner player
+                let winnerTieMatches = parseInt(player[0].tie);
+                winnerTieMatches++;
+                database.update({ name: first }, { $set: { tie: winnerTieMatches } }, { multi: true }, function (err, numReplaced) {
+                });
 
 
-        } else {
-            //Start test
-            first = req.body.secondPlayerName;
-            second = req.body.firstPlayerName;
-            firstScore = req.body.secondPlayerScore;
-            secondScore = req.body.firstPlayerScore;
-            //End test
-            console.log("second player won");
+            });
+
+            database.find({ name: second }, function (err, player) {
+                //This part retrieves player's current points and adds 1 points to it
+                let winnerCurrentPoints = parseInt(player[0].points);
+                winnerCurrentPoints++;
+                database.update({ name: second }, { $set: { points: winnerCurrentPoints } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds played matches to player
+                let winnerPlayedMatches = parseInt(player[0].played);
+                winnerPlayedMatches++;
+                database.update({ name: second }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds tie matches to the losing player
+                let loserTieMatches = parseInt(player[0].tie);
+                loserTieMatches++;
+                database.update({ name: second }, { $set: { tie: loserTieMatches } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds scored goals to his current number of goals
+                let loserCurrentGoals = parseInt(player[0].goals);
+                loserCurrentGoals += parseInt(secondScore);
+                database.update({ name: second }, { $set: { goals: loserCurrentGoals } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds scored goalsin to his current number of goalsIn
+                let loserCurrentGoalsIn = parseInt(player[0].goalIn);
+                loserCurrentGoalsIn += parseInt(firstScore);
+                database.update({ name: second }, { $set: { goalIn: loserCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
+                });
+
+            });
+
         }
 
-        console.log("first player name is: " + first);
-        console.log("second player name is: " + second);
-        console.log("first score: " + firstScore);
-        console.log("second score: " + secondScore);
-        database.find({ name: first }, function (err, player) {
-            //This part retrieves player's current points and adds 3 points to it
-            let winnerCurrentPoints = parseInt(player[0].points);
-            winnerCurrentPoints += 3;
-            database.update({ name: first }, { $set: { points: winnerCurrentPoints } }, { multi: true }, function (err, numReplaced) {
+        else {
+            //Add logic for winning for each side 
+            if (req.body.firstPlayerScore > req.body.secondPlayerScore) {
+                //Start test
+                first = req.body.firstPlayerName;
+                second = req.body.secondPlayerName;
+                firstScore = req.body.firstPlayerScore;
+                secondScore = req.body.secondPlayerScore;
+                //End test
+                console.log("first player won");
+
+
+            } else {
+                //Start test
+                first = req.body.secondPlayerName;
+                second = req.body.firstPlayerName;
+                firstScore = req.body.secondPlayerScore;
+                secondScore = req.body.firstPlayerScore;
+                //End test
+                console.log("second player won");
+            }
+
+            console.log("first player name is: " + first);
+            console.log("second player name is: " + second);
+            console.log("first score: " + firstScore);
+            console.log("second score: " + secondScore);
+            database.find({ name: first }, function (err, player) {
+                //This part retrieves player's current points and adds 3 points to it
+                let winnerCurrentPoints = parseInt(player[0].points);
+                winnerCurrentPoints += 3;
+                database.update({ name: first }, { $set: { points: winnerCurrentPoints } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds scored goals to his current number of goals
+                let winnerCurrentGoals = parseInt(player[0].goals);
+                winnerCurrentGoals += parseInt(firstScore);
+                database.update({ name: first }, { $set: { goals: winnerCurrentGoals } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds goalsin scored by competitor to winnner current number of goals in
+                let winnerCurrentGoalsIn = parseInt(player[0].goalIn);
+                winnerCurrentGoalsIn += parseInt(secondScore);
+                database.update({ name: first }, { $set: { goalIn: winnerCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds played matches to player
+                let winnerPlayedMatches = parseInt(player[0].played);
+                winnerPlayedMatches++;
+                database.update({ name: first }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds won matches to the winner player
+                let winnerWonMatches = parseInt(player[0].won);
+                winnerWonMatches++;
+                database.update({ name: first }, { $set: { won: winnerWonMatches } }, { multi: true }, function (err, numReplaced) {
+                });
+
+
             });
-            //This part adds scored goals to his current number of goals
-            let winnerCurrentGoals = parseInt(player[0].goals);
-            winnerCurrentGoals += parseInt(firstScore);
-            database.update({ name: first }, { $set: { goals: winnerCurrentGoals } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds goalsin scored by competitor to winnner current number of goals in
-            let winnerCurrentGoalsIn = parseInt(player[0].goalIn);
-            winnerCurrentGoalsIn += parseInt(secondScore);
-            database.update({ name: first }, { $set: { goalIn: winnerCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds played matches to player
-            let winnerPlayedMatches = parseInt(player[0].played);
-            winnerPlayedMatches++;
-            database.update({ name: first }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds won matches to the winner player
-            let winnerWonMatches = parseInt(player[0].won);
-            winnerWonMatches++;
-            database.update({ name: first }, { $set: { won: winnerWonMatches } }, { multi: true }, function (err, numReplaced) {
+
+            database.find({ name: second }, function (err, player) {
+                //This part adds played matches to player
+                let winnerPlayedMatches = parseInt(player[0].played);
+                winnerPlayedMatches++;
+                database.update({ name: second }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds lost matches to the losing player
+                let loserLostMatches = parseInt(player[0].lost);
+                loserLostMatches++;
+                database.update({ name: second }, { $set: { lost: loserLostMatches } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds scored goals to his current number of goals
+                let loserCurrentGoals = parseInt(player[0].goals);
+                loserCurrentGoals += parseInt(secondScore);
+                database.update({ name: second }, { $set: { goals: loserCurrentGoals } }, { multi: true }, function (err, numReplaced) {
+                });
+                //This part adds scored goalsin to his current number of goalsIn
+                let loserCurrentGoalsIn = parseInt(player[0].goalIn);
+                loserCurrentGoalsIn += parseInt(firstScore);
+                database.update({ name: second }, { $set: { goalIn: loserCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
+                });
+
             });
 
 
-        });
-
-        database.find({ name: second }, function (err, player) {
-            //This part adds played matches to player
-            let winnerPlayedMatches = parseInt(player[0].played);
-            winnerPlayedMatches++;
-            database.update({ name: second }, { $set: { played: winnerPlayedMatches } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds lost matches to the losing player
-            let loserLostMatches = parseInt(player[0].lost);
-            loserLostMatches++;
-            database.update({ name: second }, { $set: { lost: loserLostMatches } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds scored goals to his current number of goals
-            let loserCurrentGoals = parseInt(player[0].goals);
-            loserCurrentGoals += parseInt(secondScore);
-            database.update({ name: second }, { $set: { goals: loserCurrentGoals } }, { multi: true }, function (err, numReplaced) {
-            });
-            //This part adds scored goalsin to his current number of goalsIn
-            let loserCurrentGoalsIn = parseInt(player[0].goalIn);
-            loserCurrentGoalsIn += parseInt(firstScore);
-            database.update({ name: second }, { $set: { goalIn: loserCurrentGoalsIn } }, { multi: true }, function (err, numReplaced) {
-            });
-
-        });
-
+        }
 
     }
+
 
     // console.log("Data base neeeeeeeeeeeew length is: " + databaseLength);
 

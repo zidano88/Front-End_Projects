@@ -43,15 +43,56 @@ const getDataBase = async (url = '', data = {}) => {
 function loadDataToWebsite(database) {
     let databaseLength = database.length;
     let pointsArray = [];
+    let goalsArray = [];
     for (let index = 0; index < databaseLength; index++) {
         let member = database[index];
         let points = member.points;
+        let goals = member.goals;
         pointsArray.push(points);
+        goalsArray.push(goals);
     }
-    // console.log(pointsArray);
-    let sortedArray = pointsArray.sort((a, b) => b - a);;
+
+    //Bubble Sorting
+    let tempPoint = 0;
+    let tempGoal = 0;
+    for (let i = 0; i < databaseLength; i++) {
+        for (let j = 1; j < databaseLength; j++) {
+            if (pointsArray[j - 1] > pointsArray[i]) {
+                //This part sorts points array
+                tempPoint = pointsArray[j - 1];
+                pointsArray[j - 1] = pointsArray[i];
+                pointsArray[i] = tempPoint;
+                //this part sorts goals array based on points
+                tempGoal = goalsArray[j - 1];
+                goalsArray[j - 1] = goalsArray[i];
+                goalsArray[i] = tempGoal;
+            }
+        }
+    }
+    let sortedArray = pointsArray.reverse();
+    goalsArray.reverse();
+    console.log(sortedArray)
+    console.log("Bubble sorted array : " + pointsArray);
+    console.log("Goals array sorted base on point array : " + goalsArray);
+
+    //This part check if any player has same point and saves thier index in an array
+    let equalPointPlayersIndex = [];
+    let goalsOfPlayersHavingEqualPoints = [];
+
+    for (let index = 0; index < databaseLength; index++) {
+        if (sortedArray[index] == sortedArray[index + 1] || sortedArray[index] == sortedArray[index - 1]) {
+            equalPointPlayersIndex.push(index);
+            goalsOfPlayersHavingEqualPoints.push(goalsArray[index]);
+        }
+    }
+    goalsOfPlayersHavingEqualPoints.sort((a, b) => b - a);
+    // let sortedArray = pointsArray.sort((a, b) => b - a);;
+    console.log("indexes of equal points players: " + equalPointPlayersIndex);
+    console.log("goals of players having equal points: " + goalsOfPlayersHavingEqualPoints);
     let loadedNames = [];
-    console.log(sortedArray);
+    // console.log(sortedArray);
+
+    let equalPointsCounter = 0;
     for (let index = 0; index < databaseLength; index++) {
         let flag = false;
         database.forEach((member) => {
@@ -59,7 +100,23 @@ function loadDataToWebsite(database) {
             if (loadedNames.includes(member.name) || flag) {
                 return;
             }
+
+
             if (member.points == sortedArray[index]) {
+                //equalPointPlayersIndex.includes(index)
+                if (goalsOfPlayersHavingEqualPoints.includes(member.goals)) {
+                    console.log(member.name + " Has Equal points");
+                    if (goalsOfPlayersHavingEqualPoints[equalPointsCounter] != member.goals) {
+                        // console.log("hereeeeeee: " + goalsOfPlayersHavingEqualPoints[equalPointsCounter]);
+                        // console.log("hereeeeeeeeeeeeegoals: " + member.goals);
+                        console.log(member.name + " has " + member.goals + " goals")
+                        // equalPointsCounter++;
+                        return;
+                    }
+                    equalPointsCounter++;
+                    // console.log("counter is : " + equalPointsCounter);
+                    // let playersGoals = goalsOfPlayersHavingEqualPoints[index];
+                }
                 let newPlayer = document.createElement("li");
                 newPlayer.classList.add("memberElement");
                 newPlayer.innerHTML = `<div class="position">${index + 1}</div>
@@ -145,15 +202,40 @@ function loadPlayerNamesToSelect(database) {
 
 }
 
+
+//Modal Code Starts here
+const modal = document.querySelector(".modal");
+// const trigger = document.querySelector(".trigger");
+const closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+// trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+//Modal code ends here
+
+
 window.addEventListener('load', (event) => {
     getDataBase('/getDataBase').then(function (data) {
         console.log("loaded on start");
         loadDataToWebsite(data);
         loadPlayerNamesToSelect(data);
-        // console.log("data is: " + data)
-        // data.forEach((member) => {
-        //     console.log("member" + member);
-        // });
+        let firstMember = document.getElementsByClassName('name')[1].innerHTML;
+        console.log("First member is: " + document.getElementsByClassName('name')[1].innerHTML);
+        document.getElementById("modalText").innerHTML = firstMember;
+        document.getElementById("modalStaticText").innerHTML = `is the Leader of the league so far`;
+        toggleModal();
+
 
     });
 })
@@ -221,8 +303,15 @@ document.getElementById('addNewMatchBtn').addEventListener('click', (event) => {
 
     let newMatch = { firstPlayerName: firstPlayer, firstPlayerScore: firstPlayerGoals, secondPlayerName: secondPlayer, secondPlayerScore: secondPlayerGoals };
 
-    postPlayerData('/addNewMatch', newMatch)
-    console.log('player added');
+    postPlayerData('/addNewMatch', newMatch).then(function (data) {
+        // console.log(data);
+
+        if (data.operation == "failed") {
+            console.log("Operation Failed");
+            alert("Please Choose Different PLayers")
+        }
+
+    });
     document.location.reload(true);
     //    /addNewMatch
     // console.log(`first player goals: ${firstPLayerGoals} and second players goals: ${secondPLayerGoals}`);
