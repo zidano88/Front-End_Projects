@@ -42,27 +42,16 @@ const getDataBase = async (url = '', data = {}) => {
 //This function get database as an input and then loads this data into the webpage
 function loadDataToWebsite(database) {
     let databaseLength = database.length;
-    let pointsArray = [];
+    let count = 1;
     for (let index = 0; index < databaseLength; index++) {
-        let member = database[index];
-        let points = member.points;
-        pointsArray.push(points);
-    }
-    // console.log(pointsArray);
-    let sortedArray = pointsArray.sort((a, b) => b - a);;
-    let loadedNames = [];
-    console.log(sortedArray);
-    for (let index = 0; index < databaseLength; index++) {
-        let flag = false;
-        database.forEach((member) => {
-
-            if (loadedNames.includes(member.name) || flag) {
-                return;
-            }
-            if (member.points == sortedArray[index]) {
+        for (let i = 0; i < databaseLength; i++) {
+            let member = database[i];
+            console.log('index is: ' + i);
+            console.log(`Member Position is: ${member.position}`)
+            if (member.position == count) {
                 let newPlayer = document.createElement("li");
                 newPlayer.classList.add("memberElement");
-                newPlayer.innerHTML = `<div class="position">${index + 1}</div>
+                newPlayer.innerHTML = `<div class="position">${member.position}</div>
                 <div class="name">${member.name}</div>
                 <img src="${member.logo}" class="teamLogo" alt="">
                 <div class="played">${member.played}</div>
@@ -73,41 +62,13 @@ function loadDataToWebsite(database) {
                 <div class="goalsIn">${member.goalIn}</div>
                 <div class="points">${member.points}</div>`;
                 listOfPlayers.appendChild(newPlayer);
-                loadedNames.push(member.name);
-                flag = true
+                // console.log(database);
+                count++;
+                console.log("count is " + count);
             }
-        });
 
-
+        }
     }
-    // let count = 1;
-    // for (let index = 0; index < databaseLength; index++) {
-    //     for (let i = 0; i < databaseLength; i++) {
-    //         let member = database[i];
-    //         console.log('index is: ' + i);
-    //         // console.log(`Member Position is: ${member.position}`);
-    //         console.log(`Member Points are: ${member.points}`);
-    //         if (member.position == count) {
-    //             let newPlayer = document.createElement("li");
-    //             newPlayer.classList.add("memberElement");
-    //             newPlayer.innerHTML = `<div class="position">${member.position}</div>
-    //             <div class="name">${member.name}</div>
-    //             <img src="${member.logo}" class="teamLogo" alt="">
-    //             <div class="played">${member.played}</div>
-    //             <div class="won">${member.won}</div>
-    //             <div class="lost">${member.lost}</div>
-    //             <div class="tie">${member.tie}</div>
-    //             <div class="goals">${member.goals}</div>
-    //             <div class="goalsIn">${member.goalIn}</div>
-    //             <div class="points">${member.points}</div>`;
-    //             listOfPlayers.appendChild(newPlayer);
-    //             // console.log(database);
-    //             count++;
-    //             console.log("count is " + count);
-    //         }
-
-    //     }
-    // }
 
 
     // database.forEach((member) => {
@@ -172,7 +133,7 @@ document.getElementById('addNewPLayerBtn').addEventListener('click', (event) => 
     getDataBase('/getDataBase').then(function (data) {
 
         let newEntryPlayer = {
-            // position: (data.length) + 1,
+            position: (data.length) + 1,
             name: newPlayerName,
             logo: `/images/${newLogoUrl}`,
             played: 0,
@@ -221,9 +182,7 @@ document.getElementById('addNewMatchBtn').addEventListener('click', (event) => {
 
     let newMatch = { firstPlayerName: firstPlayer, firstPlayerScore: firstPlayerGoals, secondPlayerName: secondPlayer, secondPlayerScore: secondPlayerGoals };
 
-    postPlayerData('/addNewMatch', newMatch)
-    console.log('player added');
-    document.location.reload(true);
+    postPlayerData('/addNewMatch', newMatch);
     //    /addNewMatch
     // console.log(`first player goals: ${firstPLayerGoals} and second players goals: ${secondPLayerGoals}`);
     // var strUser2 = e.options[e.selectedIndex].text; //test2
