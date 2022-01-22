@@ -119,9 +119,9 @@ function loadDataToWebsite(database) {
                 }
                 let newPlayer = document.createElement("li");
                 newPlayer.classList.add("memberElement");
-                newPlayer.innerHTML = `<div class="position">${index + 1}</div>
+                newPlayer.innerHTML = `<img src="${member.logo}" class="teamLogo" alt="">
+                <div class="position">${index + 1}</div>
                 <div class="name">${member.name}</div>
-                <img src="${member.logo}" class="teamLogo" alt="">
                 <div class="played">${member.played}</div>
                 <div class="won">${member.won}</div>
                 <div class="lost">${member.lost}</div>
@@ -230,8 +230,8 @@ window.addEventListener('load', (event) => {
         console.log("loaded on start");
         loadDataToWebsite(data);
         loadPlayerNamesToSelect(data);
-        let firstMember = document.getElementsByClassName('name')[1].innerHTML;
-        console.log("First member is: " + document.getElementsByClassName('name')[1].innerHTML);
+        let firstMember = document.getElementsByClassName('name')[0].innerHTML;
+        console.log("First member is: " + document.getElementsByClassName('name')[0].innerHTML);
         document.getElementById("modalText").innerHTML = firstMember;
         document.getElementById("modalStaticText").innerHTML = `is the Leader of the league so far`;
         toggleModal();

@@ -1,4 +1,5 @@
-{"name":"Darwish","logo":"/images/Real_Madrid.png","played":8,"won":2,"lost":4,"tie":2,"goals":26,"goalIn":21,"points":8,"timestamp":1642727701533,"_id":"Rk1qf3IcpKE6DeQa"}
-{"name":"Omar","logo":"/images/AC_Milan.png","played":6,"won":3,"lost":1,"tie":2,"goals":21,"goalIn":17,"points":11,"timestamp":1642727690015,"_id":"TNNLOyIr4gEgmSg0"}
+{"name":"Darwish","logo":"/images/Real_Madrid.png","played":9,"won":2,"lost":4,"tie":3,"goals":28,"goalIn":23,"points":9,"timestamp":1642727701533,"_id":"Rk1qf3IcpKE6DeQa"}
+{"name":"Omar","logo":"/images/AC_Milan.png","played":7,"won":3,"lost":1,"tie":3,"goals":23,"goalIn":19,"points":12,"timestamp":1642727690015,"_id":"TNNLOyIr4gEgmSg0"}
 {"name":"Ayman","logo":"/images/Barcelona.png","played":8,"won":1,"lost":3,"tie":4,"goals":18,"goalIn":17,"points":7,"timestamp":1642728562270,"_id":"TfIpE4Hds3WMiwus"}
 {"name":"Sameh","logo":"/images/Chelsea.png","played":4,"won":2,"lost":0,"tie":2,"goals":28,"goalIn":7,"points":8,"timestamp":1642768007279,"_id":"Ulf3WJxV9mLPIvCs"}
+{"name":"Klay","logo":"/images/Napoli.png","played":0,"won":0,"lost":0,"tie":0,"goals":0,"goalIn":0,"points":0,"timestamp":1642805699385,"_id":"eTHGrLZtcOXr4jSK"}

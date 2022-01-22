@@ -17,7 +17,7 @@ body{
 
 .mainHeadline {
     font-family: 'Rubik Beastly', cursive;
-    font-weight: 400;
+    font-weight: bolder;
     color: black;
     background-color: var(--white-main);
     /* box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -65,22 +65,31 @@ body{
     padding: 1rem;
 }
 
-.playersList {
-    padding: 0;
-    padding-left: 0;
+#playersList {   
+    font-size: 20px;
+    /* font-weight: bold; */
 }
 
 .memberElement {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 1rem;
+    margin: 2rem 1rem;
+    
     padding: 0.7rem 0.2rem;
+    padding-left: 0;
     background-color: var(--caded-blue);
     justify-items: center;
+    border-radius: 3rem;
+    height: 2rem;
 }
 
 .teamLogo {
-    width: 3rem;
+    width: 3.84rem;
+    margin-top: -1.4rem;
+    margin-left: -1rem;
+    background-color: var(--caded-blue);
+    padding: 0.5rem;
+    border-radius: 4rem;
 }
 
 .addNewSec {
@@ -244,4 +253,12 @@ input[type=text]{
     font-size: 35px;
     color: gray;
     margin-top: 0;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.points {
+    font-weight: bold;
 }
