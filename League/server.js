@@ -53,6 +53,19 @@ app.get("/getDataBase", (req, res) => {
     })
 });
 
+//GET method for matches database
+app.get("/getMatchesDataBase", (req, res) => {
+    // res.send(database);
+    matchesdatabase.find({}, (err, data) => {
+        if (err) {
+            console.log('error here');
+            res.end();
+            return;
+        }
+        res.json(data);
+    })
+});
+
 //POST method to add new player
 app.post("/addNewPlayer", (req, res) => {
     console.log(req.body);

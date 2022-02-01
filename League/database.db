@@ -1,5 +1,14 @@
-{"name":"Darwish","logo":"/images/Real_Madrid.png","played":9,"won":2,"lost":4,"tie":3,"goals":28,"goalIn":23,"points":9,"timestamp":1642727701533,"_id":"Rk1qf3IcpKE6DeQa"}
-{"name":"Omar","logo":"/images/AC_Milan.png","played":7,"won":3,"lost":1,"tie":3,"goals":23,"goalIn":19,"points":12,"timestamp":1642727690015,"_id":"TNNLOyIr4gEgmSg0"}
-{"name":"Ayman","logo":"/images/Barcelona.png","played":8,"won":1,"lost":3,"tie":4,"goals":18,"goalIn":17,"points":7,"timestamp":1642728562270,"_id":"TfIpE4Hds3WMiwus"}
-{"name":"Sameh","logo":"/images/Chelsea.png","played":4,"won":2,"lost":0,"tie":2,"goals":28,"goalIn":7,"points":8,"timestamp":1642768007279,"_id":"Ulf3WJxV9mLPIvCs"}
-{"name":"Klay","logo":"/images/Napoli.png","played":0,"won":0,"lost":0,"tie":0,"goals":0,"goalIn":0,"points":0,"timestamp":1642805699385,"_id":"eTHGrLZtcOXr4jSK"}
+{"name":"Ayman","logo":"/images/Barcelona.png","played":1,"won":1,"lost":0,"tie":0,"goals":4,"goalIn":2,"points":3,"timestamp":1643689029760,"_id":"0AORV7kwrRZ8cn9f"}
+{"name":"Darwish","logo":"/images/Real_Madrid.png","played":2,"won":0,"lost":2,"tie":0,"goals":3,"goalIn":6,"points":0,"timestamp":1643689018525,"_id":"3i6fe92vV73NYQnF"}
+{"name":"Abd ElAal","logo":"/images/Liverpool.png","played":2,"won":2,"lost":0,"tie":0,"goals":6,"goalIn":3,"points":6,"timestamp":1643689068520,"_id":"6Q3geyq1fmWWcTgg"}
+{"name":"Sameh","logo":"/images/Bayern_Munich.png","played":2,"won":0,"lost":2,"tie":0,"goals":3,"goalIn":7,"points":0,"timestamp":1643689049201,"_id":"n2ZKYVhwfIrMxEze"}
+{"name":"Omar","logo":"/images/AC_Milan.png","played":1,"won":1,"lost":0,"tie":0,"goals":3,"goalIn":1,"points":3,"timestamp":1643689001349,"_id":"ngSa2gE5U9dy1Jxw"}
+{"name":"Darwish","logo":"/images/Real_Madrid.png","played":2,"won":0,"lost":2,"tie":0,"goals":3,"goalIn":6,"points":3,"timestamp":1643689018525,"_id":"3i6fe92vV73NYQnF"}
+{"name":"Darwish","logo":"/images/Real_Madrid.png","played":2,"won":0,"lost":2,"tie":0,"goals":6,"goalIn":6,"points":3,"timestamp":1643689018525,"_id":"3i6fe92vV73NYQnF"}
+{"name":"Darwish","logo":"/images/Real_Madrid.png","played":2,"won":0,"lost":2,"tie":0,"goals":6,"goalIn":8,"points":3,"timestamp":1643689018525,"_id":"3i6fe92vV73NYQnF"}
+{"name":"Darwish","logo":"/images/Real_Madrid.png","played":3,"won":0,"lost":2,"tie":0,"goals":6,"goalIn":8,"points":3,"timestamp":1643689018525,"_id":"3i6fe92vV73NYQnF"}
+{"name":"Darwish","logo":"/images/Real_Madrid.png","played":3,"won":1,"lost":2,"tie":0,"goals":6,"goalIn":8,"points":3,"timestamp":1643689018525,"_id":"3i6fe92vV73NYQnF"}
+{"name":"Ayman","logo":"/images/Barcelona.png","played":2,"won":1,"lost":0,"tie":0,"goals":4,"goalIn":2,"points":3,"timestamp":1643689029760,"_id":"0AORV7kwrRZ8cn9f"}
+{"name":"Ayman","logo":"/images/Barcelona.png","played":2,"won":1,"lost":1,"tie":0,"goals":4,"goalIn":2,"points":3,"timestamp":1643689029760,"_id":"0AORV7kwrRZ8cn9f"}
+{"name":"Ayman","logo":"/images/Barcelona.png","played":2,"won":1,"lost":1,"tie":0,"goals":6,"goalIn":2,"points":3,"timestamp":1643689029760,"_id":"0AORV7kwrRZ8cn9f"}
+{"name":"Ayman","logo":"/images/Barcelona.png","played":2,"won":1,"lost":1,"tie":0,"goals":6,"goalIn":5,"points":3,"timestamp":1643689029760,"_id":"0AORV7kwrRZ8cn9f"}

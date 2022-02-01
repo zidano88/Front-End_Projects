@@ -16,9 +16,10 @@ body{
 }
 
 .mainHeadline {
-    font-family: 'Rubik Beastly', cursive;
+    /* font-family: 'Rubik Beastly', cursive; */
     font-weight: bolder;
     color: black;
+    font-size: 50px;
     background-color: var(--white-main);
     /* box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19); */
 
@@ -261,4 +262,98 @@ input[type=text]{
 
 .points {
     font-weight: bold;
+}
+
+.customMargin {
+    margin: 1rem;
+}
+
+.tableContainer {
+    /* width: auto; */
+    margin: 2rem 9rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--dark-transparent-white);
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow-x:auto;
+}
+
+.matchTable {
+    border-spacing: 0;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+    0px 10px 20px rgba(0,0,0,0.05),
+    0px 20px 20px rgba(0,0,0,0.05),
+    0px 30px 20px rgba(0,0,0,0.05);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+     
+}
+
+.matchTable thead tr th{
+    border-top-left-radius: 1rem;
+    background-image: linear-gradient(26.5deg, #04AA6D 50%, #333 50%);
+}
+
+.matchTable thead tr td:last-of-type {
+    border-top-right-radius: 1rem;
+}
+
+.matchTable tbody tr:last-of-type th {
+    border-bottom-left-radius: 1rem;
+}
+/* 00cccc */
+
+.matchTable thead {
+    background-color: #333;
+	color: white;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 2%;
+    text-align: center;
+}
+
+.matchTable tbody th {
+    background-color: #04AA6D;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 30px;
+    width: 6rem;
+    text-align: center;
+}
+
+
+tr:nth-child(even) {background-color: gray;}
+/* tr th {background-color: #04AA6D;} */
+/* thead tr{background-color: #04AA6D;} */
+/* tr:hover {background-color: yellow;} */
+
+tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #aaa;
+}
+  
+tbody:hover tr:hover td, tbody:hover tr:hover {
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.matchTable tbody tr:nth-child(1) td:nth-child(2),
+.matchTable tbody tr:nth-child(2) td:nth-child(3),
+.matchTable tbody tr:nth-child(3) td:nth-child(4),
+.matchTable tbody tr:nth-child(4) td:nth-child(5),
+.matchTable tbody tr:nth-child(5) td:nth-child(6),
+.matchTable tbody tr:nth-child(6) td:nth-child(7)
+{
+    background-color: red;
+}
+
+.matchTable tbody tr:last-of-type td:last-of-type{
+    border-bottom-right-radius: 1rem;
 }

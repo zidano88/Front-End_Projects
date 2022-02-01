@@ -22,7 +22,7 @@ const postPlayerData = async (url = '', data = {}) => {
 }
 
 
-//getWeatherDatafromServer is a GET function that receives data from the server
+//getDatabase is a GET function that receives database from the server
 const getDataBase = async (url = '', data = {}) => {
     const response = await fetch(url, {
         method: 'GET',
@@ -38,6 +38,22 @@ const getDataBase = async (url = '', data = {}) => {
     }
 }
 
+// /getMatchesDataBase 
+//getMatchesDataBase is a GET function that receives database from the server
+const getMatchesDataBase = async (url = '', data = {}) => {
+    const response = await fetch(url, {
+        method: 'GET',
+    });
+
+    try {
+        const newData = await response.json();
+        // console.log(newData);
+        return newData
+
+    } catch (error) {
+        console.log("error", error);
+    }
+}
 
 //This function get database as an input and then loads this data into the webpage
 function loadDataToWebsite(database) {
@@ -188,6 +204,9 @@ function loadDataToWebsite(database) {
 
 //This functions loads players' names from database to select from them in new match section on the website
 function loadPlayerNamesToSelect(database) {
+    //this part loads first th in the header
+    let tableHeaderTh = document.createElement("th");
+    document.getElementById('tableHeaderRow').appendChild(tableHeaderTh);
     database.forEach((member) => {
         console.log(`player name is: ${member.name}`);
         let playerName = document.createElement("option");
@@ -197,10 +216,71 @@ function loadPlayerNamesToSelect(database) {
         // let duplicatePlayerName = playerName;
         document.getElementById('matchPlayerOne').appendChild(playerName);
         document.getElementById('matchPlayerTwo').appendChild(duplicatePlayerName);
+        //This part loads names in matches table
+
+        let tableHeaderTd = document.createElement("td");
+        tableHeaderTd.innerHTML = member.name;
+        document.getElementById('tableHeaderRow').appendChild(tableHeaderTd);
+        let rowPlayer = document.createElement('tr');
+        let rowheader = document.createElement('th');
+        rowheader.innerHTML = member.name;
+        rowPlayer.appendChild(rowheader);
+        for (let index = 0; index < database.length; index++) {
+            rowPlayer.appendChild(document.createElement('td'));
+        }
+        document.getElementById('tableBody').appendChild(rowPlayer);
+
+    });
+    getMatchesDataBase('/getMatchesDataBase').then(function (data) {
+        console.log('Matches database');
+        // console.log(data);
+        data.forEach((match) => {
+
+            console.log(match.firstPlayerName);
+            console.log(match.firstPlayerScore);
+            console.log(match.secondPlayerName);
+            console.log(match.secondPlayerScore);
+            let firstPlayerName = match.firstPlayerName;
+            let secondPlayerName = match.secondPlayerName;
+            let firstPlayerScore = match.firstPlayerScore;
+            let secondPlayerScore = match.secondPlayerScore;
+            let tableHeaderNames = document.getElementById('tableHeaderRow').children;
+            let xIndex, yIndex;
+            for (let index = 0; index < tableHeaderNames.length; index++) {
+                if (tableHeaderNames[index].innerHTML == firstPlayerName) {
+                    console.log(firstPlayerName);
+                    xIndex = index;
+                    console.log("x index: " + xIndex);
+                }
+                if (tableHeaderNames[index].innerHTML == secondPlayerName) {
+                    console.log(secondPlayerName);
+                    yIndex = index;
+                    console.log("y index: " + yIndex);
+                }
+            }
+            console.log(document.getElementById('tableBody').children[xIndex - 1].children[yIndex]);
+            console.log(document.getElementById('tableBody').children[yIndex - 1].children[xIndex]);
+            if (document.getElementById('tableBody').children[xIndex - 1].children[yIndex].innerHTML == "") {
+                console.log('empty');
+                document.getElementById('tableBody').children[xIndex - 1].children[yIndex].innerHTML = firstPlayerScore + " \\ " + secondPlayerScore;
+            } else {
+                if (document.getElementById('tableBody').children[yIndex - 1].children[xIndex].innerHTML == "") {
+                    console.log("second match is empty");
+                    document.getElementById('tableBody').children[yIndex - 1].children[xIndex].innerHTML = secondPlayerScore + " \\ " + firstPlayerScore;
+                }
+            }
+
+
+        });
+
+
+
+
 
     });
 
 }
+
 
 
 //Modal Code Starts here
@@ -233,8 +313,10 @@ window.addEventListener('load', (event) => {
         let firstMember = document.getElementsByClassName('name')[0].innerHTML;
         console.log("First member is: " + document.getElementsByClassName('name')[0].innerHTML);
         document.getElementById("modalText").innerHTML = firstMember;
-        document.getElementById("modalStaticText").innerHTML = `is the Leader of the league so far`;
-        toggleModal();
+        // Uncomment to show message on reload
+
+        // document.getElementById("modalStaticText").innerHTML = `is the Leader of the league so far`;
+        // toggleModal();
 
 
     });

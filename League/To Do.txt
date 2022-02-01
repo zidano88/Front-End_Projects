@@ -1,0 +1,1 @@
+- check when adding new match if the equiavlent field in matches tables is empty or not
